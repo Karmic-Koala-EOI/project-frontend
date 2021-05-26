@@ -1,0 +1,68 @@
+.navbar-header {
+
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding-bottom: 3px;
+}
+
+.business {
+    padding: 60px 60px;
+}
+
+.business img {
+    margin: 10px !important;
+}
+
+.features {
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding: 60px 60px;
+}
+
+.feature1 {
+    padding: 60px 60px;
+}
+
+.feature-col {
+    margin-top: 60px;
+}
+
+.feature2 {
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding: 60px 60px;
+}
+
+.feature3 {
+    padding: 60px 60px;
+}
+
+.register {
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding: 60px 60px;
+}
+
+.register a {
+    margin-top: 30px !important;
+}
+
+.team {
+    padding: 60px 60px;
+}
+
+.team .avatar{
+    margin-top: 30px;
+}
+
+footer {
+    /* background: linear-gradient(0deg, #aff6cf 0%, #9f98e8 100%); */
+    padding: 30px 30px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer {
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding-top: 3px;
+}
+
+.text-gray-800 {
+    color: #5a5c69 !important;
+}
