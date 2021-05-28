@@ -17,10 +17,10 @@ const routes: Routes = [{
   path: 'register',
   component: RegisterComponent,
 },
-// {
-//   path: 'remind-password',
-//   component: RemindPasswordComponent,
-// }
+ {
+   path: 'remind-password',
+   component: RemindPasswordComponent,
+ }
 
 ];
 
