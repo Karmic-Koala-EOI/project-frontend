@@ -19,7 +19,13 @@
                 <a class="nav-link" href="#team">Equipo</a>
             </li>
         </ul>
-        <a class="btn btn-outline-success my-2 my-sm-0" href="#" role="button">Login</a>
+        <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button">Login</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="dashboard" role="button">Dashboard</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" (click)="logout()">Cerrar sesion</a>
+        </div>
         </div>
     </nav>
 </div>
@@ -138,7 +144,7 @@
     <div class="container text-center">
         <h1>Distribuye contenido en tus redes sociales con Koala</h1>
         <h5 class="h5 text-gray-800">Preocúpate de crear contenido de calidad, nosotros nos encargamos de hacerlo llegar a tu comunidad</h5>
-        <a class="btn btn-success my-2 my-sm-0" href="#" role="button">Regístrate ahora</a>
+        <a class="btn btn-success my-2 my-sm-0" href="register" role="button">Regístrate ahora</a>
     </div>
 </section>
 <section id="team" class="team">
