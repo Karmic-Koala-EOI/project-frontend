@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-//import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
+import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,10 +17,10 @@ const routes: Routes = [{
   path: 'register',
   component: RegisterComponent,
 },
-// {
-//   path: 'remind-password',
-//   component: RemindPasswordComponent,
-// }
+{
+   path: 'remind-password',
+   component: RemindPasswordComponent,
+ }
 
 ];
 
