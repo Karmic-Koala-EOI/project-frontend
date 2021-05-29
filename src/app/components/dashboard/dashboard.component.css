@@ -1,0 +1,88 @@
+.container-dash{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-dash{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main{
+    width: 100%;
+    background-color:lightgray;
+    border: solid 2px rgb(148, 139, 125);
+    border-left: solid 1px rgb(148, 139, 125);
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AFF6CF;
+    border: solid 2px rgb(65, 139, 115);
+    border-right: solid 1px rgb(65, 139, 115);
+    max-width: 150px;
+    min-width: 100px;
+}
+
+.aside a {
+    height: 60px;
+}
+
+.bashboard{
+    margin: 20px;
+}
+
+.question{
+    margin: 20px;
+}
+
+.img-profile{
+    /* HACER RESPONSIVE Y QUE ESCALEN LOS ICONOS */
+    margin: 20px;
+    background-color: darkgray;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.img-profile a {
+    text-decoration: black;
+}
+
+header, main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin: auto;
+}
+
+.foo {
+    text-align: center;
+}
+
+.card-group{
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.card{
+    margin: 20px;
+}
+
+.descrip{
+    margin: 20px;
+}
+
+@media screen and (max-width: 700px){
+
+}

@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RemindPasswordComponent } from './components/remind-password/remind-pas
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    RemindPasswordComponent
+    RemindPasswordComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
