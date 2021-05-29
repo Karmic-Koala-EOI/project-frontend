@@ -20,11 +20,16 @@
             </li>
         </ul>
         <div *ngIf="user === null">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button">Login</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button" style="float: left; margin: 10px;">Login</a>
+        </div>
+        <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="register" role="button" style="float: left;">Register</a>
         </div>
         <div *ngIf="user !== null">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="dashboard" role="button">Dashboard</a>
-            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" (click)="logout()">Cerrar sesion</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="dashboard" role="button" style="float: left; margin: 10px;">Dashboard</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" style="text-overflow:ellipsis; overflow: hidden; white-space: nowrap;" (click)="logout()">Cerrar sesion</a>
         </div>
         </div>
     </nav>
