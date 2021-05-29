@@ -19,7 +19,6 @@ export class DashboardComponent implements OnInit {
   getUserLogged() {
     this.AuthService.getUserLogged()
       .then(user => user ? this.user = user : this.user = null)
-      console.log(this.user)
   }
 
   logout() {
