@@ -14,12 +14,18 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div> -->
+    <div *ngIf="errorLog" class="alert alert-danger" role="alert"> 
+      Debes introducir un correo y una contraseña validos
+    </div>
     <button type="submit" class="btn btn-outline-success my-2 my-sm-0"> Sign In </button>
+    <!-- DEJO COMENTADO LO DE GOOGLE QUE NO FUNCIONA DE MOMENTO
     <div class="or-container">
       <div class="line-separator"></div>
       <div class="or-label">or</div>
       <div class="line-separator"></div>
   </div>
   <button class="btn btn-outline-light my-2 my-sm-0" style="color:green;border-width: 1px; border-color: green ;" href="#" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</button>
+    -->
+    <div routerLink="/register" class="registerbtn">Register</div>
 </form>
 </div>

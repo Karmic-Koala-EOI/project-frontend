@@ -74,3 +74,9 @@
     margin: 0 15px;
     text-align: center
 }
+.registerbtn {
+  color: blue; 
+  text-decoration-line: underline;
+  padding: 10px; 
+  cursor: pointer;
+}

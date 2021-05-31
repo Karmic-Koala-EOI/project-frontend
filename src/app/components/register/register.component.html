@@ -8,12 +8,17 @@
       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email" required>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password" required>
+      <div *ngIf="errorReg" class="alert alert-danger" role="alert"> 
+        Debes introducir un nombre, un correo y una contraseña validos
+      </div>
       <button type="submit" class="btn btn-outline-success my-2 my-sm-0"> Register </button>
-      <div class="or-container">
+      <!-- DEJO COMENTADO LO DE GOOGLE QUE NO FUNCIONA DE MOMENTO
+        <div class="or-container">
         <div class="line-separator"></div>
         <div class="or-label">or</div>
         <div class="line-separator"></div>
     </div>
     <button class="btn btn-outline-light my-2 my-sm-0" style="color:green;border-width: 1px; border-color: green ;" href="#" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</button>
+       -->
   </form>
   </div>

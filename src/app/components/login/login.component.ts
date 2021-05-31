@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
     email: new FormControl(''),
     password: new FormControl(''),
   });
-
+  errorLog = false;
+  
   constructor(private AuthService : AuthService, private Router : Router) { }
 
   ngOnInit(): void {
@@ -23,10 +24,14 @@ export class LoginComponent implements OnInit {
   submitLogin() {
     this.AuthService.login(this.loginForm.value)
       .then(res => {
+        if(res){
         this.AuthService.setToken(res.token);
         this.Router.navigateByUrl('/');
+        }
+        else {
+          this.errorLog=true;
+        }
       })
       .catch(e => {console.log(e)})
   }
-
 }
