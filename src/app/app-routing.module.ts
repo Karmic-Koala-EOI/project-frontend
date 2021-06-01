@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
+import { RPGCookiesComponent } from './components/rpg-cookies/rpg-cookies.component';
 
 const routes: Routes = [{
   path: '',
@@ -24,7 +25,11 @@ const routes: Routes = [{
  },
  {
   path : "dashboard",
-  component : DashboardComponent
+  component : DashboardComponent,
+},
+{
+  path: "politica-de-cookies",
+  component:RPGCookiesComponent,
 }
 
 ];

@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RPGCookiesComponent } from './components/rpg-cookies/rpg-cookies.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     RegisterComponent,
     RemindPasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    RPGCookiesComponent
   ],
   imports: [
     BrowserModule,
