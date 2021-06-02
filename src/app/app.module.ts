@@ -3,6 +3,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 
+//import {AuthServiceConfig} from 'angularx-social-login';
+//import {SocialLoginModule, GoogleLoginProvider} from 'angularx-social-login';
+//import {HttpClientModule} from '@angular/common/http';
+//import {FormsModule} from'@angular/forms'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +19,18 @@ import { RPGCookiesComponent } from './components/rpg-cookies/rpg-cookies.compon
 import { RpgPrivacyPolicyComponent } from './components/rpg-privacy-policy/rpg-privacy-policy.component';
 import { RpgLegalTermsComponent } from './components/rpg-legal-terms/rpg-legal-terms.component';
 import { RpgLegalNoticeComponent } from './components/rpg-legal-notice/rpg-legal-notice.component';
+import { from } from 'rxjs';
+
+//const config = new AuthServiceConfig([
+//  {
+//  id: GoogleLoginProvider.PROVIDER_ID,
+//  provider: new GoogleLoginProvider('')
+//  }
+//  ]);
+  
+//export function provideConfig() {
+//  return config;
+//  }
 
 @NgModule({
   declarations: [
@@ -32,9 +49,14 @@ import { RpgLegalNoticeComponent } from './components/rpg-legal-notice/rpg-legal
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+ //   SocialLoginModule,
+  //  HttpClientModule,
+    //FormsModule,
   ],
-  providers: [CookieService],
+  providers: [CookieService,
+ //{ provide: AuthServiceConfig, useFactory: provideConfig }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
