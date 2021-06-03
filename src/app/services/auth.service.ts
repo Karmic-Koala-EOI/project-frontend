@@ -22,7 +22,8 @@ export class AuthService {
   }
 
   loged() {
-    if (localStorage.getItem("isLogged") === "true") {
+    
+    if (this.cookies.get("isLogged") !== "false") {
       return true;
     } else {
       return false;
