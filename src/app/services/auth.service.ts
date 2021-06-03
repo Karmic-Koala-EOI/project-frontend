@@ -11,32 +11,41 @@ export class AuthService {
   constructor(private cookies: CookieService, private Router : Router) { }
 
   // Login
-  async login(user: any) : Promise<{token: string}> {
-    return axios.post("https://karmic-koala-backend.vercel.app/login/", user)
+  async login(user: any) : Promise<{token: string, idUsuario: string}> {
+    return axios.post("http://localhost:3000/login/", user)
     .then(response => response.data ? response.data : "Error en el login")
     .catch(err => console.error(err));
   }
 
   // Register
   async register(user: any) {
-    return axios.post("https://karmic-koala-backend.vercel.app/register/", user, {
+    return axios.post("http://localhost:3000/register/", user, {
       headers: {"Access-Control-Allow-Origin": "*"}
     })
     .then(response => response ? this.login(user) : response) 
     .catch(err => console.error(err));
   }
 
-  // Token
+  // Cookies
   setToken(token: string) {
     this.cookies.set("token", token);
+  }
+
+  setUser(id: string) {
+    this.cookies.set("id", id);
   }
 
   getToken() {
     return this.cookies.get("token");
   }
 
+  getUserID() {
+    return this.cookies.get("id");
+  }
+
   logout() {
     this.cookies.delete("token");
+    this.cookies.delete("id");
     this.Router.navigateByUrl('/');
   }
 
@@ -44,7 +53,7 @@ export class AuthService {
   async getUserLogged() {
     const token = this.getToken();
     if(token) {
-      return axios.get("https://karmic-koala-backend.vercel.app/", {
+      return axios.get("http://localhost:3000/", {
       headers: {
         authorization: 'Bearer ' + token
       }

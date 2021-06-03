@@ -18,7 +18,16 @@ export class HomeComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      // .then(user => user ? this.user = user : this.user = null)
+      .then(user => {
+        if(user) {
+          console.log(user);
+          this.user = user;
+        }
+        else {
+          this.user = null
+        }
+      })
   }
 
   logout() {
