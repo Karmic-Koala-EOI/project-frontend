@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SocialMediaAccountsComponent } from './components/social-media-accounts/social-media-accounts.component';
+import { PostContentComponent } from './components/post-content/post-content.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SocialMediaAccountsComponent } from './components/social-media-accounts
     RegisterComponent,
     RemindPasswordComponent,
     DashboardComponent,
-    SocialMediaAccountsComponent
+    SocialMediaAccountsComponent,
+    PostContentComponent
   ],
   imports: [
     BrowserModule,

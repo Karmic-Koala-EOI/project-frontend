@@ -23,4 +23,28 @@ export class SocialMediaService {
       return console.error(err);
     }
   }
+
+  isLoggedTwitter() {
+    return this.AuthService.getUserLogged()
+      .then(user => user.twitterLogged);
+  }
+
+  async postTwitter(post : any) {
+    let userID = this.AuthService.getUserID();
+    console.log(post);
+    try {
+      const response = await axios.post("http://localhost:3000/postTweet", {
+        query: {
+          id: userID
+        },
+        data: {
+          message: post.message,
+          photo_url: post.photo_url
+        }
+      });
+      return response ? response.data : "Error al publicar";
+    } catch (err) {
+      return console.error(err);
+    }
+  }
 }

@@ -8,7 +8,12 @@
                     <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png" class="z-depth-1"
                     alt="Sample avatar" height="250" width="250">
                 </div>
-                <a class="p-2 fa-lg fb-ic" (click)="loginTwitter()" target="_blank">Login</a>
+                <div *ngIf="LoggedTwitter">
+                    <p>Cuenta vinculada correctamente</p>
+                </div>
+                <div *ngIf="!LoggedTwitter">
+                    <a class="p-2 fa-lg fb-ic" (click)="loginTwitter()" target="_blank">Vincular cuenta</a>
+                </div>
             </div>  
         </div>
     </div>

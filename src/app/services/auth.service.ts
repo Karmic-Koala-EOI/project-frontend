@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private cookies: CookieService, private Router : Router) { }
 
   // Login
-  async login(user: any) : Promise<{token: string, idUsuario: string}> {
+  async login(user: any) : Promise<{token: string, usuario : any}> {
     return axios.post("http://localhost:3000/login/", user)
     .then(response => response.data ? response.data : "Error en el login")
     .catch(err => console.error(err));

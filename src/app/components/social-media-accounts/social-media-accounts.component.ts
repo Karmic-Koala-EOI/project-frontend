@@ -11,9 +11,12 @@ import { Router } from '@angular/router';
 })
 export class SocialMediaAccountsComponent implements OnInit {
 
+  LoggedTwitter : boolean = false;
+
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router) { }
 
   ngOnInit(): void {
+    this.isLoggedTwitter();
   }
 
   // loginTwitter() {
@@ -36,6 +39,11 @@ export class SocialMediaAccountsComponent implements OnInit {
     //   return console.error(err);
     // }
     window.location.href = `http://localhost:3000/auth/twitter?id=${userID}`;
+  }
+
+  isLoggedTwitter() {
+    this.SocialMediaService.isLoggedTwitter()
+      .then(logged => this.LoggedTwitter = logged);
   }
 
 }
