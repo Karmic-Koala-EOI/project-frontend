@@ -10,7 +10,9 @@ export class HomeComponent implements OnInit {
 
   user: any = null;
 
-  constructor(private AuthService : AuthService) { }
+  constructor( private AuthService : AuthService) { }
+
+  loged : boolean = true;
 
   ngOnInit(): void {
     this.getUserLogged();
@@ -20,12 +22,10 @@ export class HomeComponent implements OnInit {
     this.AuthService.getUserLogged()
       .then(user => {if(user) {
         this.user = user;
-        console.log("En el home el login es true");
-        this.AuthService.isLogin(true);
+        localStorage.setItem("isLogged", "true")
       } else {
         this.user = null;
-        console.log("En el home el login es falso");
-        this.AuthService.isLogin(false);
+        localStorage.setItem("isLogged", "false")
       }
       })
   }
