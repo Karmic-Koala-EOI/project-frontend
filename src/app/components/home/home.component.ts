@@ -18,7 +18,16 @@ export class HomeComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      .then(user => {if(user) {
+        this.user = user;
+        console.log("En el home el login es true");
+        this.AuthService.isLogin(true);
+      } else {
+        this.user = null;
+        console.log("En el home el login es falso");
+        this.AuthService.isLogin(false);
+      }
+      })
   }
 
   logout() {
