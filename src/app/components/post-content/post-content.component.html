@@ -1,0 +1,47 @@
+<div class="container-dash">
+  <div class="row-dash">
+      <app-dashboard-navbar></app-dashboard-navbar>
+      <div class="main">
+          <div *ngIf="user === null">
+            <div >
+              <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
+            </div>
+          </div>
+          <div *ngIf="user !== null">
+              <a class="btn btn-outline-success my-2 my-sm-0" href="" role="button">Home</a>
+              <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" (click)="logout()">Cerrar sesion</a>
+          </div>
+          <header>
+              <div class="card">
+                  <div class="card-header">
+                    Publicar en Twitter
+                  </div>
+                  <div class="card-body">
+                    <form class="form-post-twitter" [formGroup]="postTwitterForm" (ngSubmit)="submitPostTwitter()">
+                      <div class="form-group">
+                        <label for="inputMessage">Texto</label>
+                        <input type="text" id="inputMessage" class="form-control" placeholder="Texto" formControlName="message" required autofocus>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inputPhotoURL">URL de la foto</label>
+                        <input type="text" id="inputPhotoURL" class="form-control" placeholder="URL de la foto" formControlName="photo_url">
+                      </div>
+                      <div *ngIf="postError" class="alert alert-danger" role="alert"> 
+                        Error al intentar publicar el tweet
+                      </div>
+                      <div *ngIf="postOk" class="alert alert-success" role="alert"> 
+                        Tweet publicado correctamente
+                      </div>
+                      <br />
+                      <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Publicar</button>
+                    </form>
+                  </div>
+                </div>
+          </header>
+          <footer>
+              <div class="foo">© Karmic Koala. Todos los derechos reservados <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" alt="" width="60" height="60"></div>
+          </footer>
+      </div>
+  </div>
+</div>

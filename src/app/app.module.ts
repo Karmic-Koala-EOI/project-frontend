@@ -2,12 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
-
-//import {AuthServiceConfig} from 'angularx-social-login';
-//import {SocialLoginModule, GoogleLoginProvider} from 'angularx-social-login';
-//import {HttpClientModule} from '@angular/common/http';
-//import {FormsModule} from'@angular/forms'
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,17 +14,10 @@ import { RpgPrivacyPolicyComponent } from './components/rpg-privacy-policy/rpg-p
 import { RpgLegalTermsComponent } from './components/rpg-legal-terms/rpg-legal-terms.component';
 import { RpgLegalNoticeComponent } from './components/rpg-legal-notice/rpg-legal-notice.component';
 import { from } from 'rxjs';
-
-//const config = new AuthServiceConfig([
-//  {
-//  id: GoogleLoginProvider.PROVIDER_ID,
-//  provider: new GoogleLoginProvider('')
-//  }
-//  ]);
-  
-//export function provideConfig() {
-//  return config;
-//  }
+import { DashboardNavbarComponent } from './components/dashboard-navbar/dashboard-navbar.component';
+import { SocialMediaAccountsComponent } from './components/social-media-accounts/social-media-accounts.component';
+import { PostContentComponent } from './components/post-content/post-content.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -44,19 +31,18 @@ import { from } from 'rxjs';
     RpgPrivacyPolicyComponent,
     RpgLegalTermsComponent,
     RpgLegalNoticeComponent
+    SocialMediaAccountsComponent,
+    PostContentComponent,
+    DashboardNavbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
- //   SocialLoginModule,
-  //  HttpClientModule,
-    //FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [CookieService,
- //{ provide: AuthServiceConfig, useFactory: provideConfig }
-],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
