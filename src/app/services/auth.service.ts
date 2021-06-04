@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   loged() {
-    if (this.cookies.get("token") !== "") {
+    if (this.cookies.get("session") !== "") {
       return true;
     } else {
       return false;
@@ -39,7 +39,7 @@ export class AuthService {
 
   // Cookies
   setToken(token: string) {
-    this.cookies.set("token", token);
+    this.cookies.set("session", token);
   }
 
   setUser(id: string) {
@@ -47,7 +47,7 @@ export class AuthService {
   }
 
   getToken() {
-    return this.cookies.get("token");
+    return this.cookies.get("session");
   }
   
   getUserID() {
@@ -55,7 +55,7 @@ export class AuthService {
   }
 
   logout() {
-    this.cookies.delete("token");
+    this.cookies.delete("session");
     this.cookies.delete("id");
     this.Router.navigateByUrl('/');
   }
