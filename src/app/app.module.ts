@@ -30,7 +30,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     RPGCookiesComponent,
     RpgPrivacyPolicyComponent,
     RpgLegalTermsComponent,
-    RpgLegalNoticeComponent
+    RpgLegalNoticeComponent,
     SocialMediaAccountsComponent,
     PostContentComponent,
     DashboardNavbarComponent,
