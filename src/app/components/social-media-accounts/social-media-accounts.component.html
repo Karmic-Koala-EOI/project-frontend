@@ -1,20 +1,47 @@
-<section id="social-media-accounts" class="social-media-accounts">
-    <div class="container text-center">
-        <h1 class="h1">Enlazar redes sociales</h1>
-        <div class="row">
-            <div class="col-lg-12 col-md-6 mb-lg-0 mb-5">
-                <h5 class="font-weight-bold mt-4 mb-3">Twitter</h5>
-                <div class="avatar mx-auto">
-                    <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png" class="z-depth-1"
-                    alt="Sample avatar" height="250" width="250">
-                </div>
-                <div *ngIf="LoggedTwitter">
-                    <p>Cuenta vinculada correctamente</p>
-                </div>
-                <div *ngIf="!LoggedTwitter">
-                    <a class="p-2 fa-lg fb-ic" (click)="loginTwitter()" target="_blank">Vincular cuenta</a>
-                </div>
-            </div>  
+<div class="container-dash">
+    <div class="row-dash">
+        <app-dashboard-navbar></app-dashboard-navbar>
+        <div class="main">
+            <div *ngIf="user === null">
+              <div >
+                <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
+              </div>
+            </div>
+            <div *ngIf="user !== null">
+                <a class="btn btn-outline-success my-2 my-sm-0" href="" role="button">Home</a>
+                <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" (click)="logout()">Cerrar sesion</a>
+            </div>
+            <header>
+                <div class="card">
+                    <div class="card-header">
+                        Enlazar redes sociales
+                    </div>
+                    <div class="card-body">
+                        <section id="social-media-accounts" class="social-media-accounts">
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-6 mb-lg-0 mb-5">
+                                        <div class="avatar mx-auto">
+                                            <img src="../../../assets/images/twitter.png" class="z-depth-1"
+                                            alt="Sample avatar" height="50" width="50">
+                                        </div>
+                                        <h5 class="font-weight-bold mt-4 mb-3">Twitter</h5>
+                                        <div *ngIf="LoggedTwitter">
+                                            <p>Cuenta vinculada correctamente</p>
+                                        </div>
+                                        <div *ngIf="!LoggedTwitter">
+                                            <button type="button" (click)="loginTwitter()" class="btn btn-primary">Vincular cuenta</button>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                  </div>
+            </header>
+            <footer>
+                <div class="foo">© Karmic Koala. Todos los derechos reservados <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" alt="" width="60" height="60"></div>
+            </footer>
         </div>
     </div>
-</section>
+</div>

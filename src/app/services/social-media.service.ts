@@ -42,7 +42,7 @@ export class SocialMediaService {
           photo_url: post.photo_url
         }
       });
-      return response ? response.data : "Error al publicar";
+      return response.data;
     } catch (err) {
       return console.error(err);
     }

@@ -1,13 +1,6 @@
 <div class="container-dash">
     <div class="row-dash">
-        <div class="aside">
-            <div class="img-profile"><img src="" alt=""></div>
-            <a routerLink="/dashboard" class="bashboard"><img src="../../../assets/images/dashboard50px.png" alt=""></a>
-            <a routerLink="/social-media-accounts" class="bashboard"><img src="https://static.thenounproject.com/png/464914-200.png" alt="" height="50"></a>
-            <a routerLink="/post-content" class="bashboard"><img src="https://cdn2.iconfinder.com/data/icons/squircle-ui/32/Edit-512.png" alt="" height="50"></a>
-            <!-- <a href="" class="calendar"><img src="../../../assets/images/calendar.png" alt=""></a> -->
-            <!-- <a href="" class="question"><img src="../../../assets/images/question50.png" alt=""></a> -->
-        </div>
+        <app-dashboard-navbar></app-dashboard-navbar>
         <div class="main">
             <div *ngIf="user === null">
               <div >
@@ -21,7 +14,7 @@
             <header>
                 <div class="card">
                     <div class="card-header">
-                        Bienvenido al dashboard
+                        Bienvenido al dashboard <span *ngIf="user !== null">{{user.userName}}</span>
                     </div>
                     <div class="card-body">
                       <blockquote class="blockquote mb-0">
@@ -31,94 +24,9 @@
                     </div>
                   </div>
             </header>
-            <main>
-              
-              <div class="card text-center">
-                <div class="card-header">
-                  Datos de usuario:
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">user name: {{user.userName}}</h5>
-                  <p class="card-text">email: {{user.email}}</p>
-                </div>
-              </div>
-            </main>
             <footer>
                 <div class="foo">© Karmic Koala. Todos los derechos reservados <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" alt="" width="60" height="60"></div>
             </footer>
         </div>
     </div>
 </div>
-
-
-
-
-
-<!-- <div class="row-dash">
-  <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="https://i.picsum.photos/id/1000/5626/3635.jpg?hmac=qWh065Fr_M8Oa3sNsdDL8ngWXv2Jb-EE49ZIn6c0P-g" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="row-dash">
-  <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="https://i.picsum.photos/id/1016/3844/2563.jpg?hmac=WEryKFRvTdeae2aUrY-DHscSmZuyYI9jd_-p94stBvc" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="https://i.picsum.photos/id/1006/3000/2000.jpg?hmac=x83pQQ7LW1UTo8HxBcIWuRIVeN_uCg0cG6keXvNvM8g" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-</div> -->

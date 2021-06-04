@@ -10,8 +10,10 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardNavbarComponent } from './components/dashboard-navbar/dashboard-navbar.component';
 import { SocialMediaAccountsComponent } from './components/social-media-accounts/social-media-accounts.component';
 import { PostContentComponent } from './components/post-content/post-content.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PostContentComponent } from './components/post-content/post-content.com
     RemindPasswordComponent,
     DashboardComponent,
     SocialMediaAccountsComponent,
-    PostContentComponent
+    PostContentComponent,
+    DashboardNavbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

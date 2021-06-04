@@ -11,12 +11,14 @@ import { Router } from '@angular/router';
 })
 export class SocialMediaAccountsComponent implements OnInit {
 
-  LoggedTwitter : boolean = false;
+  LoggedTwitter: boolean = false;
+  user: any = null;
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router) { }
 
   ngOnInit(): void {
     this.isLoggedTwitter();
+    this.getUserLogged();
   }
 
   // loginTwitter() {
@@ -44,6 +46,15 @@ export class SocialMediaAccountsComponent implements OnInit {
   isLoggedTwitter() {
     this.SocialMediaService.isLoggedTwitter()
       .then(logged => this.LoggedTwitter = logged);
+  }
+
+  getUserLogged() {
+    this.AuthService.getUserLogged()
+      .then(user => user ? this.user = user : this.user = null)
+  }
+
+  logout() {
+    this.AuthService.logout();
   }
 
 }
