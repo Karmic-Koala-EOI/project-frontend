@@ -1,0 +1,62 @@
+<div class="navbar-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+        <a class="navbar-brand ml-5" href="#">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-center">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#features">Características</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">Equipo</a>
+            </li>
+        </ul>
+            <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button" style="float: left; margin: 10px;">Login</a>
+        </div>
+        <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="register" role="button" style="float: left;">Register</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="dashboard" role="button" style="float: left; margin: 10px;">Dashboard</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" style="text-overflow:ellipsis; overflow: hidden; white-space: nowrap;" (click)="logout()">Cerrar sesion</a>
+        </div>
+    
+        </div>
+    </nav>
+<div>
+    <!-- Texto aquí-->
+<div class="content">
+    <h1 style="text-align: center;"> Aviso legal
+    </h1>
+    <p> Last update 02/06/2021 </p>
+    <h3> Apartado 1</h3>
+    <p>  Info</p>
+    <h3> Apartado 2 </h3>
+    <h3> Apartado 3 </h3>
+</div>   
+<!-- Fin de texto Inicio Footer--> 
+    <div class="footer">
+        <footer class="bg-light"> 
+            <div class="row">
+                <div class="col text-center">
+                    <h6 class="text-gray-800">© Karmic Koala. Todos los derechos reservados</h6>
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+                </div>
+            </div>
+            <a style="color:grey" href= "legal-terms">Legal Terms </a>
+            <a style="color:grey" href= "privacy-policy">Privacy Policy </a>
+            <a style="color:grey" href= "cookies-policy">Cookies Policy </a>
+            <a style="color:grey" href= "legal-notice">Legal Notice </a>
+        </footer>
+    </div>

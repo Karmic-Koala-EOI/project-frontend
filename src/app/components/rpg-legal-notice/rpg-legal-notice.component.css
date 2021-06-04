@@ -1,0 +1,32 @@
+.navbar-header {
+
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding-bottom: 3px;
+}
+
+footer {
+    /* background: linear-gradient(0deg, #aff6cf 0%, #9f98e8 100%); */
+    padding: 30px 30px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer {
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding-top: 3px;
+}
+
+.text-gray-800 {
+    color: #5a5c69 !important;
+}
+
+.content {
+    padding: 25px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    background-color: #fff;
+    opacity: 0.65;
+
+}

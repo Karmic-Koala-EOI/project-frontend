@@ -1,0 +1,46 @@
+<div class="container-dash">
+    <div class="row-dash">
+        <app-dashboard-navbar></app-dashboard-navbar>
+        <div class="main">
+            <div *ngIf="user === null">
+              <div >
+                <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
+              </div>
+            </div>
+            <div *ngIf="user !== null">
+                <a class="btn btn-outline-success my-2 my-sm-0" href="" role="button">Home</a>
+                <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" (click)="logout()">Cerrar sesion</a>
+            </div>
+            <main>
+                <div class="card">
+                    <div class="card-header">
+                        Bienvenido al dashboard <span *ngIf="user !== null">{{user.userName}}</span>
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>En esta seccion encontrarás las publicaciones que has subido</p>
+                        <footer class="blockquote-footer">Vamos a <cite title="Source Title">romper las redes</cite></footer>
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <div class="card" *ngIf="trendingTwitter !== null">
+                    <div class="card-header">
+                      Trending topics de Twitter en <span *ngIf="user !== null">{{user.country}}</span>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center col-6" *ngFor="let trend of trendingTwitter">
+                          <a [href]="trend.url" target="_blank">{{ trend.name }}</a>
+                          <span class="badge badge-primary badge-pill">{{ trend.tweet_volume }}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </main>
+            <footer>
+                <div class="foo">© Karmic Koala. Todos los derechos reservados <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" alt="" width="60" height="60"></div>
+            </footer>
+        </div>
+    </div>
+</div>

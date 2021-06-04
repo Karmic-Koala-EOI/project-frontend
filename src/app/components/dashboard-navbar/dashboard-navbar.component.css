@@ -1,0 +1,31 @@
+.aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AFF6CF;
+    border: solid 2px rgb(65, 139, 115);
+    border-right: solid 1px rgb(65, 139, 115);
+    max-width: 150px;
+    min-width: 100px;
+}
+
+.aside a {
+    height: 60px;
+}
+
+.img-profile{
+    /* HACER RESPONSIVE Y QUE ESCALEN LOS ICONOS */
+    margin: 20px;
+    background-color: darkgray;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.img-profile a {
+    text-decoration: black;
+}
+
+.dashboard{
+    margin: 20px;
+}

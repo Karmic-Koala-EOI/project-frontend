@@ -1,24 +1,23 @@
 <div class="container-fluid text-center">
-    <form class="form-signup" [formGroup]="registerForm" (ngSubmit)="submitRegister()">
-      <img routerLink="/" class="mb-4" src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
-      <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-      <label for="inputUserName" class="sr-only">Name</label>
-      <input type="text" id="inputUserName" class="form-control" placeholder="Name" formControlName="userName" required autofocus>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email" required>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password" required>
-      <div *ngIf="errorReg" class="alert alert-danger" role="alert"> 
-        Debes introducir un nombre, un correo y una contraseña validos
-      </div>
-      <button type="submit" class="btn btn-outline-success my-2 my-sm-0"> Register </button>
-      <!-- DEJO COMENTADO LO DE GOOGLE QUE NO FUNCIONA DE MOMENTO
+    <form class="form-signup">
+      <div [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+        <img routerLink="/" class="mb-4" src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+        <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+        <label for="inputUserName" class="sr-only">Nombre</label>
+        <input type="text" id="inputUserName" class="form-control" placeholder="Nombre" formControlName="userName" required autofocus>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" formControlName="email" required>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" formControlName="password" required>
+        <div *ngIf="errorReg" class="alert alert-danger" role="alert"> 
+          Debes introducir un nombre, un correo y una contraseña validos
+        </div>
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0"> Registrarse </button>
         <div class="or-container">
-        <div class="line-separator"></div>
-        <div class="or-label">or</div>
-        <div class="line-separator"></div>
-    </div>
-    <button class="btn btn-outline-light my-2 my-sm-0" style="color:green;border-width: 1px; border-color: green ;" href="#" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</button>
-       -->
-  </form>
-  </div>
+          <div class="line-separator"></div>
+          <div class="or-label">or</div>
+          <div class="line-separator"></div>
+        </div>
+        <a  class="btn btn-outline-light my-2 my-sm-0" role="button" style="color:green;border-width: 1px; border-color: green ;" href="http://localhost:3000/auth/google/callback" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</a>
+        
+</div>
