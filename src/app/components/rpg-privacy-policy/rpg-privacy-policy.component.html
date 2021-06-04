@@ -1,0 +1,141 @@
+<div class="navbar-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+        <a class="navbar-brand ml-5" href="#">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-center">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#features">Características</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">Equipo</a>
+            </li>
+        </ul>
+            <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button" style="float: left; margin: 10px;">Login</a>
+        </div>
+        <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="register" role="button" style="float: left;">Register</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="dashboard" role="button" style="float: left; margin: 10px;">Dashboard</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" style="text-overflow:ellipsis; overflow: hidden; white-space: nowrap;" (click)="logout()">Cerrar sesion</a>
+        </div>
+    
+        </div>
+    </nav>
+<div>
+    <!-- Texto aquí-->
+<div class="content">
+    <h1 style="text-align: center;"> Política de Privacidad </h1>
+    <p> Karmic Koala. y sus afiliados (colectivamente) se comprometen a proteger su privacidad y a cumplir con las leyes de protección de datos aplicables. Esta política de privacidad describe cómo Karmic Koala recopila, utiliza, divulga y protege la información sobre usted. También describimos las opciones que tiene sobre su información.</p>
+    <p> Última actualización 02/06/2021 </p>
+    <h3> 1. Nuestros Servicios</h3>
+    <p> Karmic Koala ofrece un conjunto de herramientas de gestión de redes sociales (disponibles en los planes Team, Professional, Enterprise y otros) a las que se puede acceder a través de nuestros sitios web y aplicaciones móviles. Estas herramientas te permiten reunir todas tus cuentas de redes sociales para facilitar el acceso y la gestión a través de un único portal en línea. A través de este portal, puede gestionar sus campañas de redes sociales, marketing y publicidad; relacionarse con su público; programar y publicar mensajes; y analizar los resultados de estas actividades. En conjunto, nos referimos a estas herramientas como nuestros "Servicios". </p>
+    <p>La recopilación, el uso y la gestión de la información personal por parte de las redes sociales, incluidas Facebook, Instagram, Twitter y LinkedIn (colectivamente, las "Redes Sociales") se rigen por sus respectivas políticas y condiciones de privacidad. Al utilizar las Redes Sociales, usted está obligado a cumplir con sus políticas y condiciones de privacidad. Le recomendamos que revise cuidadosamente sus políticas y términos de privacidad, ya que Karmic Koala no es responsable de las Redes Sociales. </p>
+    <p>Nuestros Servicios también le permiten personalizar y conectar su cuenta de Karmic Koala con servicios de terceros ("Servicios de terceros"), incluso a través de aplicaciones a las que puede acceder en el Directorio de aplicaciones o que pueden estar disponibles para usted a través de nuestro portal/panel. La recopilación de su información por parte de estos terceros se rige por las políticas y condiciones de privacidad de los Servicios de Terceros. Le recomendamos que revise cuidadosamente sus políticas y términos de privacidad, ya que Karmic Koala no es responsable de los Servicios de Terceros. </p>
+    <p>Nuestros Servicios no están pensados para su uso por parte de niños y solo deberían acceder a ellos personas que tengan al menos 18 años y que utilicen los Servicios con fines comerciales. </p>
+    <h3> 2. Que información recolectamos </h3>
+    <p>Recogemos información sobre usted en la medida en que sea razonablemente necesario para las siguientes actividades: </p>
+    <h5>Usando nuestros servicios </h5>
+    <p>Recogemos la siguiente información cuando usted utiliza nuestros Servicios:</p>
+    <h6>Información de la cuenta:</h6>
+    <ul>
+        <li> Su información de contacto y perfil, incluyendo su nombre, dirección de correo electrónico, nombre de la organización y dirección; sus preferencias, como el idioma, la zona horaria y los tipos de comunicación que le gustaría recibir de nosotros; y la imagen (si decide proporcionarla). También podemos obtener esta información si decide utilizar un servicio de inicio de sesión social, como Facebook Login, para crear o acceder a su cuenta. </li>
+        <li> Información de facturación y otros datos de pago (si se inscribe en un servicio de pago o adquiere un Servicio de terceros), incluidos los datos del método de pago, como el número de la tarjeta de crédito. </li>
+        <li> Los Servicios que ha adquirido de nosotros, incluido el tipo de plan, el número de miembros del equipo y la información sobre las transacciones relacionadas con los Servicios. </li>
+    </ul>
+    <h6>Contenido:</h6>
+    <ul>
+        <li>Su información de perfil social para las Redes Sociales que elija para conectarse a los Servicios. Por ejemplo, la información de su perfil de Facebook puede incluir su nombre de usuario y su imagen de perfil. </li>
+        <li>Una ubicación específica, como una dirección, una ciudad o un lugar (por ejemplo, un restaurante), si decide compartir esta información. </li>
+        <li>Tus mensajes, publicaciones, comentarios, imágenes, publicidad y otro material que crees y subes a los Servicios; y la información que se recoge de las Redes Sociales a las que decides conectarte y que se muestra en nuestros Servicios. </li>
+        <li>El contenido que puede enviar y recibir a través de las Redes Sociales puede contener información personal que Karmic Koala no recoge ni procesa directamente. Esto puede incluir información como: nombres, fotos, edad, sexo, ubicación geográfica, opiniones, preferencias y números de teléfono. </li>
+    </ul>
+    <h6>Registros, uso y datos de soporte: </h6>
+    <ul>
+        <li>Datos de registro, que pueden incluir su dirección IP, la dirección de la página web que visitó antes de utilizar los Servicios, el tipo de navegador y su configuración, la información de su dispositivo (como la marca, el modelo y el sistema operativo), la fecha y la hora en que utilizó los Servicios, información sobre la configuración de su navegador, preferencias de idioma, identificadores únicos y cookies. </li>
+        <li>Datos de uso y análisis, que pueden incluir la frecuencia de inicio de sesión y los diferentes tipos de actividad realizada por los usuarios. </li>
+        <li>Información general de localización, como la dirección IP y la región en la que se encuentra cuando se conecta y utiliza los Servicios.  </li>
+        <li>Preguntas de asistencia al cliente, problemas y comentarios generales que usted decida proporcionar. </li>
+    </ul>
+    <h5>Navegar por nuestras páginas web </h5>
+    <p>Cuando usted navega por nuestros sitios web, recogemos información sobre usted como se describe a continuación, parte de la cual se recoge automáticamente: </p>
+    <ul>
+        <li>Cuando utiliza la funcionalidad de chat automatizado (chatbots) para realizar una consulta u otra solicitud, podemos recopilar información sobre usted, como su nombre y dirección de correo electrónico, su solicitud específica e información relacionada con su uso de nuestros Servicios. </li>
+        <li>Karmic Koala y nuestros proveedores de servicios autorizados utilizan cookies y otras tecnologías de seguimiento similares en nuestros sitios web y Servicios, incluyendo balizas web, píxeles y tokens de software. Estos se describen en nuestro Aviso de cookies. </li>
+        <li>Datos agregados de uso del sitio web, incluidos los datos de análisis de formularios (como el tiempo que se tarda en completar el formulario), la tasa de participación, la repetición de la sesión y los movimientos del ratón. Si desea excluirse de esta recopilación, siga los pasos indicados aquí. Tenga en cuenta que esto requiere el uso de una cookie de exclusión, por lo que si restablece sus cookies, tendrá que volver a excluirse. </li>
+    </ul>
+    <h3>3. ¿Cómo utilizamos su información?</h3>
+    <p>Utilizamos su información para los fines que se describen a continuación: </p>
+    <h4>Prestación y seguridad de nuestros servicios </h4>
+    <ul>
+        <li>Necesitamos identificar y autenticar a nuestros usuarios para garantizar, por ejemplo, que sólo los usuarios autorizados puedan utilizar los Servicios para su organización, y para realizar cambios en sus cuentas. </li>
+        <li>Utilizamos la información que nos proporciona al registrarse para configurar su cuenta, procesar los pagos, ponernos en contacto con usted en relación con los Servicios y gestionar su cuenta. </li>
+        <li>Utilizamos su información de contacto y la información relacionada con su solicitud para responder a sus consultas, gestionar nuestro contrato con usted, responder a sus preguntas y solicitudes, y enviarle actualizaciones e información sobre los Servicios. </li>
+        <li>Utilizamos los datos de registro y otros datos como la información general de localización -por ejemplo, la dirección IP de su navegador o dispositivo- para ayudarnos a gestionar el rendimiento, la seguridad y el cumplimiento de los Servicios.  </li>
+        <li>En los casos en los que usted ha decidido compartir su información de ubicación específica, utilizamos esta información para proporcionar funciones basadas en la ubicación, como permitirle compartir su ubicación en sus publicaciones para las Redes Sociales que admiten esta funcionalidad, y para utilizar cualquier funcionalidad que se base en la información de ubicación.  </li>
+        <li>Analizamos la información de uso, sus comentarios, las consultas de asistencia y las respuestas a las encuestas para ayudarnos a entender y mejorar nuestros Servicios. </li>
+    </ul>
+    <h4>Comunicándonos con usted</h4>
+    <p>Utilizamos sus datos de contacto, cuando procede, para enviarle información sobre nuestros Servicios, eventos, comunicaciones de marketing  y oportunidades de empleo. También utilizamos las estadísticas del correo electrónico, como las tasas de apertura, para evaluar la eficacia de nuestras comunicaciones y mejorarlas.  </p>
+    <h4>Mejorando nuestros sitios web y aplicaciones </h4>
+    <p>Utilizamos información sobre usted para ayudarnos a entender los patrones de uso y otras actividades en nuestros sitios web y aplicaciones, de modo que podamos diagnosticar problemas y hacer mejoras, incluyendo la mejora de la usabilidad y la seguridad. </p>
+    <h3>4. ¿Cuáles son sus derechos en relación con la información sobre usted? </h3>
+    <h4>Información de servicios</h4>
+    <p>Al utilizar nuestros servicios, puede acceder, actualizar o corregir la mayor parte de la información de su cuenta entrando en ella para editar su perfil o el registro de su organización.
+        Si tiene peticiones que no pueden llevarse a cabo accediendo a su cuenta, como acceder a información adicional o eliminar información sobre usted, envíe un correo electrónico a nuestro equipo de privacidad. Tenga en cuenta que es posible que necesitemos retener cierta información sobre usted mientras mantenga una cuenta para nuestros servicios, para proporcionarle nuestros servicios, con fines de mantenimiento de registros, para el procesamiento de pagos, para cumplir con nuestras obligaciones legales y reglamentarias, para resolver disputas o para hacer cumplir los términos de servicio aplicables u otro acuerdo en vigor entre usted (o su organización) y Karmic Koala (los "Términos de Servicio").
+        Las solicitudes de acceso, corrección o eliminación de su información se tramitarán en un plazo de treinta (30) días, a menos que sean inusualmente extensas o complejas, en cuyo caso le informaremos del plazo previsto para tramitar su solicitud.
+        Si nos ha autorizado a acceder a su cuenta de la Red Social, puede revocar este acceso en cualquier momento siguiendo las instrucciones que aparecen aquí. Por ejemplo, si nos ha autorizado a acceder a su información a través de los servicios de la API de YouTube, además de nuestro procedimiento habitual de eliminación de datos almacenados, puede revocar nuestro acceso a sus datos a través de la página de configuración de seguridad de Google, situada en https://security.google.com/settings/security/permissions.
+        Puede ponerse en contacto con nuestro equipo de asistencia para otras solicitudes generales sobre su cuenta mediante el método que prefiera, que se indica aquí. </p>
+    <h4>Correos electrónicos de marketing, publicidad y navegación por el sitio web</h4>
+    <p>En el caso de las comunicaciones de marketing, puede optar por no recibir comunicaciones de marketing enviadas por Karmic Koala accediendo a nuestra página de gestión de preferencias o haciendo clic en el enlace de cancelación de la suscripción en el correo electrónico de marketing que reciba.
+        Karmic Koala participa en la publicidad basada en intereses (cuando usted puede haber visitado nuestros sitios web u otro sitio web que nos permite mostrar publicidad relacionada con nuestros Servicios). La Iniciativa de Publicidad en Red ha desarrollado una herramienta que puede ayudarle a entender qué terceros han habilitado actualmente las cookies para su navegador y cómo excluirse de esas cookies. Para más información y para excluirse de la publicidad basada en intereses, puede visitar esta página.
+        También puede excluirse de la recopilación de datos de uso agregados, tal y como se ha descrito anteriormente en "Navegación por nuestros sitios web", siguiendo los pasos indicados aquí. </p>
+    <h3>5. ¿Quién tiene acceso a su información? </h3>
+    <p>Karmic Koala no alquila ni vende su información. Restringimos el acceso a su información a los empleados autorizados y no compartimos su información con terceros, excepto en las circunstancias que se explican a continuación. </p>
+    <h4>Empleados y contratistas autorizados </h4>
+    <p>Nuestros empleados y contratistas autorizados pueden necesitar acceder a información sobre usted cuando lo requieran para realizar su trabajo. Por ejemplo, un representante del servicio de atención al cliente necesitaría acceder a su cuenta para validar su identidad y responder a su pregunta o solicitud; nuestro equipo de comunicaciones por correo electrónico necesitaría acceder a su información de contacto para asegurarse de que esta información se envía correctamente y de que cualquier solicitud de cancelación de suscripción se gestiona adecuadamente; y nuestro personal de seguridad necesitaría revisar la información para investigar los intentos de ataques de denegación de servicio, la actividad fraudulenta de las cuentas u otros intentos de poner en peligro los Servicios. Todos nuestros empleados y contratistas están obligados a mantener la confidencialidad y proteger la privacidad de su información. </p>
+    <h4>Proveedores de servicios, distribuidores autorizados y socios </h4>
+    <p>Compartiremos información limitada sobre usted con los proveedores de servicios autorizados que utilizamos para los servicios de marketing, la comunicación con usted, la gestión de nuestra base de datos de clientes, la prestación de servicios profesionales y el suministro y la gestión de los Servicios (incluido el alojamiento de centros de datos, la seguridad de nuestros Servicios y el procesamiento de pagos).
+        Limitamos el número de proveedores de servicios a los que se les permite procesar su Contenido con el fin de ayudarnos a prestar los Servicios. Nos referimos a estos proveedores de servicios como "subprocesadores" y se enumeran en esta página.
+        Cuando usted haya adquirido un servicio de un revendedor o socio autorizado, podemos proporcionar información sobre usted a (y podemos recibir información sobre usted de) el revendedor o socio según sea necesario para apoyar su uso del servicio que ha adquirido.
+        Cuando compartimos su información con cualquiera de estos proveedores de servicios, revendedores y socios, nos aseguramos de que acepten obligaciones coherentes con esta Política de Privacidad y con cualquier otra medida de confidencialidad y seguridad apropiada, y que sólo utilicen su información para llevar a cabo los Servicios y sus solicitudes. </p>
+    <h4>Redes sociales y servicios de terceros</h4>
+    <p>Cuando usted utiliza nuestros Servicios y ha elegido conectar sus Redes Sociales a los Servicios, o si autoriza a un Servicio de Terceros a acceder a su cuenta, está aceptando proporcionar información sobre usted a las Redes Sociales y a los Servicios de Terceros bajo sus respectivos términos y políticas de privacidad. Por ejemplo, si decide conectar su cuenta de YouTube a los Servicios, esta conexión utiliza los servicios de la API de YouTube, y se le aplicará la política de privacidad de Google, que se encuentra en http://www.google.com/policies/privacy. </p>
+    <h4>Organizaciones de clientes </h4>
+    <p>Cuando su empleador o una entidad haya comprado los Servicios en su nombre, podemos revelar información sobre usted, como su nombre y dirección de correo electrónico, y cierta información de uso, incluyendo si un usuario ha iniciado sesión en el Servicio, la frecuencia de inicio de sesión y el tiempo de uso de los Servicios. </p>
+    <h4>Entidades sucesoras</h4>
+    <p>Si somos adquiridos por otra entidad o nos fusionamos con ella (en cuyo caso exigiremos a dicha entidad que asuma nuestras obligaciones en virtud de esta política de privacidad), si nos vemos envueltos en una quiebra, o si cambia la propiedad o el control de la totalidad o parte de nuestros Servicios o de sus activos, la información sobre usted se transferirá a dichas entidades. </p>
+    <h4>Fuerzas de seguridad, organismos gubernamentales y asesores profesionales </h4>
+    <p>Es posible que tengamos que revelar información sobre usted cuando creamos que es razonablemente necesario para cumplir con una ley o reglamento, o si estamos legalmente obligados a hacerlo, como en respuesta a una orden judicial o proceso legal, o para establecer, proteger o ejercer nuestros derechos legales o para defendernos contra reclamaciones o demandas legales.
+        Además, podemos estar obligados a revelar información sobre usted si creemos que es necesario para investigar, prevenir o tomar medidas (a) contra actividades ilegales, fraudes, situaciones que impliquen amenazas potenciales a nuestros derechos o propiedades (o a los derechos o propiedades de quienes utilizan nuestros Servicios), o para proteger la seguridad personal de cualquier persona; o (b) en relación con situaciones que impliquen la seguridad de nuestros Servicios, el abuso de la infraestructura de los Servicios, o de Internet en general (como el envío voluminoso de spam, o los ataques de denegación de servicio). </p>
+    <h3>6. Cambios en esta política de privacidad </h3>
+    <p>Podemos realizar cambios en esta política de privacidad en cualquier momento para reflejar las actualizaciones de nuestros Servicios, las leyes aplicables y otros factores. Incluiremos un aviso destacado en este sitio web y/o en nuestros Servicios si realizamos algún cambio sustancial, pero le animamos a que se mantenga informado revisando esta política periódicamente. </p>
+    </div>
+ 
+<!-- Fin de texto Inicio Footer--> 
+    <div class="footer">
+        <footer class="bg-light"> 
+            <div class="row">
+                <div class="col text-center">
+                    <h6 class="text-gray-800">© Karmic Koala. Todos los derechos reservados</h6>
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+                </div>
+            </div>
+            <a style="color:grey" href= "legal-terms">Legal Terms </a>
+            <a style="color:grey" href= "privacy-policy">Privacy Policy </a>
+            <a style="color:grey" href= "cookies-policy">Cookies Policy </a>
+            <a style="color:grey" href= "legal-notice">Legal Notice </a>
+        </footer>
+    </div>

@@ -1,0 +1,113 @@
+<div class="navbar-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+        <a class="navbar-brand ml-5" href="#">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-center">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#features">Características</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">Equipo</a>
+            </li>
+        </ul>
+            <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button" style="float: left; margin: 10px;">Login</a>
+        </div>
+        <div *ngIf="user === null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="register" role="button" style="float: left;">Register</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="dashboard" role="button" style="float: left; margin: 10px;">Dashboard</a>
+        </div>
+        <div *ngIf="user !== null">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" style="text-overflow:ellipsis; overflow: hidden; white-space: nowrap;" (click)="logout()">Cerrar sesion</a>
+        </div>
+    
+        </div>
+    </nav>
+<div>
+    <!-- Texto aquí-->
+<div class="content">
+    <h1 style="text-align: center;"> Términos y Condiciones de Uso de Sitio Web
+    </h1>
+    <p> Last update 02/06/2021 </p>
+    <h3> 1. Aceptación</h3>
+    <p> En el presente documento (en adelante, el “Contrato”) se establecen los términos y condiciones de Karmic Koala Empresa de Gestión de Redes Sociales, con domicilio en Silicon Valley, 66, USA, que serán de aplicación al acceso y uso por parte del Usuario de esta página web (https://karmickoala.vercel.app/). Les rogamos lean atentamente el presente Contrato. 
+        Al acceder, consultar o utilizar el Sitio Web, los Usuarios (“Vd.”, “usted”, “Usuario”, o “usuario”) aceptan cumplir los términos y condiciones establecidos en este Contrato. En caso de que usted no acepte quedar vinculado por los presentes términos y condiciones, no podrá acceder a, ni utilizar, el Sitio Web. 
+        Karmic Koala y sus respectivas empresas afiliadas (en conjunto, “RH”) se reservan el derecho de actualizar el presente Contrato siempre que lo consideren oportuno. En consecuencia, recomendamos al Usuario revisar periódicamente las modificaciones efectuadas al Contrato.
+        El presente Sitio Web está dirigido exclusivamente a personas residentes en Chile. Los Usuarios residentes o domiciliados en otro país que deseen acceder y utilizar el Sitio Web, lo harán bajo su propio riesgo y responsabilidad, por lo que deberán asegurarse de que dichos accesos y/o usos cumplen con la legislación aplicable en su país.</p>
+    <h3> 2. Requisitos relativos al usuario </h3>
+    <p> El Sitio Web y los servicios relacionados con el mismo se ofrecen a los Usuarios que tengan capacidad legal para otorgar contratos legalmente vinculantes según la legislación aplicable. 
+        Los menores no están autorizados para utilizar el Sitio Web. Si usted es menor de edad, por favor, no utilice esta web. </p>
+    <h3> 3. Licencia </h3>
+    <p>En este acto, RH otorga al Usuario una licencia limitada, no exclusiva, intransferible, no susceptible de cesión y revocable; para consultar y descargar, de forma temporal, una copia del contenido ofrecido en el Sitio Web, únicamente para uso personal del Usuario o dentro de su empresa, y nunca con fines comerciales. 
+        Todo el material mostrado u ofrecido en el Sitio Web, entre otros ejemplos, el material gráfico, los documentos, textos, imágenes, sonido, video, audio, las ilustraciones, el software y el código HTML (en conjunto, el “Contenido”), es de  exclusiva propiedad de RH o de las empresas que facilitan dicho material. 
+        El Contenido está protegido por las leyes de copyright chilenas, estadounidenses e internacionales, así como por las demás leyes, reglamentos y normas aplicables a los derechos de propiedad intelectual. Salvo disposición expresa en contrario en el presente contrato, y/o salvo que por imperativo legal ello esté expresamente permitido por leyes derogatorias de las actualmente vigentes, el Usuario no podrá (i) utilizar, copiar, modificar, mostrar, eliminar, distribuir, descargar, almacenar, reproducir, transmitir, publicar, vender, revender, adaptar, invertir el proceso de creación o crear productos derivados a partir de, el Contenido. Tampoco podrá (ii) utilizar el Contenido en otras páginas Web o en cualquier medio de comunicación como, por ejemplo, en un entorno de red, sin la previa autorización por escrito en este sentido de RH.
+        Todas las marcas comerciales, las marcas de servicio y los logos (en adelante, las “Marcas”) mostrados en el Sitio Web son propiedad exclusiva de RH y de sus respectivos propietarios. 
+        El Usuario no podrá utilizar las Marcas en modo alguno sin la previa autorización por escrito para ello de RH y los respectivos propietarios. </p>
+    <h3> 4. Información facilitada por el usuario </h3>
+    <p>El Sitio Web ofrece al Usuario un foro de obtención de empleo e información profesional. Al facilitar o introducir la información en el Sitio Web (“Información del Usuario”), el Usuario otorga a RH licencia y derecho permanente, no exclusivo, irrevocable, libre de royalties, durante el tiempo máximo permitido por la legislación aplicable, pero no le impone obligación de, utilizar, copiar, modificar, mostrar, distribuir, descargar, almacenar, reproducir, transmitir, publicar, vender, revender, adaptar ni crear productos derivados  en todo o en parte a partir de, la Información del Usuario, en ningún modo o manera. El Usuario reconoce y acepta que RH es solamente un foro pasivo a través del cual los usuarios pueden conseguir empleo o informarse a nivel profesional. RH no comprueba ni controla la Información del Usuario. En consecuencia, RH no asume garantía alguna en cuanto a la fiabilidad, precisión, integridad, validez o veracidad de la Información remitida por los usuarios. 
+        RH se reserva el derecho de, a su libre JUICIO, eliminar, retirar, negarse a reflejar o bloquear toda Información del Usuario que RH considere como inaceptable. En caso de que RH reciba alguna notificación sobre la inaceptabilidad de determinada información facilitada por los usuarios, RH podrá, con total discrecionalidad, investigar dicha información.
+        El Usuario asume y acepta que RH podrá conservar copia de la Información del Usuario, y revelar dicha información a terceros si lo considera necesario para:
+        (i) proteger la integridad del Sitio Web;
+        (ii) proteger los derechos de RH;
+        (iii) cumplir una orden judicial;
+        (iv) cumplir cualquier trámite legal;
+        (v) hacer valer los derechos y acciones que asisten a RH a tenor de este Contrato; y
+        (vi) satisfacer cualquier petición relativa a la infracción de derechos de terceros. </p>
+    <h3> 5. Prohibición general  </h3>
+    <p>Al acceder a y utilizar el Sitio Web, el Usuario se compromete a NO:
+        (a) incumplir todas las leyes, reglamentos y normas aplicables a nivel local, estatal, provincial, nacional (Chile), así como cualquier otra legislación aplicable como las leyes contra la discriminación laboral o las leyes por la igualdad de oportunidades en el empleo, cuando proceda;
+        (b) infringir los derechos de propiedad intelectual y de privacidad, entre otros, los derechos de patente (copyright), los derechos sobre la base de datos, las marcas registradas o el know how de terceros;
+        (c) descargar, enviar, transmitir o almacenar material que:
+        •    sea ilegal, ofensivo, difamatorio, fraudulento, engañoso, que induzca a error, dañino, amenazador, hostil, obsceno o censurable;
+        •    infrinja las obligaciones contractuales o de confidencialidad del Usuario;
+        •    perjudique o interfiera en las aplicaciones normales del Sitio Web, como el envío o la transmisión de virus, gusanos o troyanos, el envío continuado de material repetido o el envío de archivos desacostumbradamente grandes; o
+        •    que no esté permitido por RH, como, por ejemplo, material publicitario no autorizado, material promocional no solicitado, “correo basura”, “spams”, “cartas en cadena”, mensajes de venta directa piramidal, franquicias, material de distribución, de asociación a un club, contratos de venta o cualquier otro material inaceptable;
+        (d) vulnerar los derechos personales y de privacidad de terceros abusando del Contenido, como, por ejemplo, acosando o molestando continuadamente a dichas personas enviándoles correos electrónicos no solicitados, o recabando información de carácter personal;
+        (e) contravenir, o intentar contravenir, las medidas de seguridad del Sitio Web;
+        (f) utilizar cualquier aparato, procedimiento o mecanismo como, por ejemplo, spiders y robots de rastreo, para localizar, rescatar, buscar, o acceder al Sitio Web o al Contenido, sin el previo consentimiento por escrito de parte de RH;
+        (g) acceder o intentar acceder a la cuenta o al login de las terceras personas o empresas indicadas en el Sitio Web;
+        (h) copiar, modificar, reproducir, eliminar, distribuir, descargar, almacenar, transmitir, vender, revender, publicar, invertir el proceso de creación o crear productos derivados a partir del Contenido, excepto en lo que concierne al material remitido por el propio Usuario y que es de su propiedad, o si así lo autorizan las leyes de propiedad intelectual aplicables;
+        (i) enviar o facilitar información incorrecta, falsa o incompleta, en relación con el currículum vitae, los datos biográficos, la fecha en que empezó a trabajar o el perfil de la empresa del Usuario;
+        (j) hacerse pasar por otra persona o empresa;
+        (k) utilizar el Sitio Web de forma no autorizada o para alguna actividad delictiva;
+        (l) falsificar la información de cabecera en el correo electrónico; o
+        (m) falsear los datos sobre sí mismo, sobre su asociación con terceros o sobre su empresa. </p>
+    <h3> 6. Utilización del sitio y obligaciones concretas </h3>
+    <p>Además de las obligaciones generales señaladas en el Artículo 5, el Usuario deberá:
+        (a) utilizar el Sitio Web únicamente para los fines legalmente permitidos de buscar empleo y recabar información profesional;
+        (b) facilitar y mantener los datos personales que conforman la Información del Usuario de forma completa, correcta, actualizada y veraz;
+        (c) enviar solamente material sobre el que el Usuario tenga los correspondientes derechos o licencia para hacerlo;
+        (d) utilizar su propio criterio, precaución y sentido común al gestionar las oportunidades de empleo y la información  conseguida a través del Sitio Web; y
+        (e) asumir el riesgo de confiar en el contenido, o utilizar la información, facilitados por terceros.</p>
+    <h3> 7. Cuenta y contraseña </h3>
+    <p>Cuando el Usuario utiliza el Sitio Web, puede optar por abrir una cuenta en el Sitio. En ese caso, el Usuario recibirá el número de cuenta virtual y la contraseña inicial que le correspondan. Es responsabilidad exclusiva del Usuario:
+        (a) mantener la confidencialidad de dichos números de cuenta virtual y contraseña;
+        (b) actualizar y comprobar frecuentemente su contraseña; y
+        (c) notificar inmediatamente a RH, si tiene conocimiento del uso no autorizado de su cuenta o de cualquier vulneración de las medidas de seguridad. </p>
+</div>   
+<!-- Fin de texto Inicio Footer--> 
+    <div class="footer">
+        <footer class="bg-light"> 
+            <div class="row">
+                <div class="col text-center">
+                    <h6 class="text-gray-800">© Karmic Koala. Todos los derechos reservados</h6>
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
+                </div>
+            </div>
+            <a style="color:grey" href= "legal-terms">Legal Terms </a>
+            <a style="color:grey" href= "privacy-policy">Privacy Policy </a>
+            <a style="color:grey" href= "cookies-policy">Cookies Policy </a>
+            <a style="color:grey" href= "legal-notice">Legal Notice </a>
+        </footer>
+    </div>

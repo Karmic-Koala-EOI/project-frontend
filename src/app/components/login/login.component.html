@@ -1,11 +1,11 @@
-<div class="container-fluid text-center">
+<div class="container-fluid text-center flex-column" >
   <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
     <img routerLink="/" class="mb-4" src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
     <h1 class="h3 mb-3 font-weight-normal">Inicio de sesión</h1>
     <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email" formControlName="email" required autofocus>
+    <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email" formControlName="email" required autofocus>
     <label for="inputPassword" class="sr-only">Contraseña</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" formControlName="password" required>
+    <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Contraseña" formControlName="password" required>
     <!-- TEXTO FORGOT PASSWORD
       <a class="forgotpassword" routerLink="/remind-password">Forgot password?</a> -->
     <!-- CHECKBOX REMEMBER-ME
@@ -17,20 +17,16 @@
     <div *ngIf="errorLog" class="alert alert-danger" role="alert"> 
       Debes introducir un correo y una contraseña validos
     </div>
-    <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Iniciar sesión</button>
-    <!-- DEJO COMENTADO LO DE GOOGLE QUE NO FUNCIONA DE MOMENTO
+    <button type="submit" class="btn btn-outline-success  my-2 my-sm-0">Iniciar sesión</button>
+    
     <div class="or-container">
       <div class="line-separator"></div>
       <div class="or-label">or</div>
       <div class="line-separator"></div>
   </div>
-  <button class="btn btn-outline-light my-2 my-sm-0" style="color:green;border-width: 1px; border-color: green ;" href="#" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</button>
-    -->
-    <div class="or-container">
-      <div class="line-separator"></div>
-      <div class="or-label">o</div>
-      <div class="line-separator"></div>
-    </div>
-    <a href="/register" class="btn btn-outline-success my-2 my-sm-0">Registrarse</a>
-  </form>
+  <a  class="btn btn-outline-light my-2 my-sm-0" style="color:green;border-width: 1px; border-color: green ;" href="http://localhost:3000/auth/google/login" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</a>
+</form>
+<p class= "mt-2"> ¿No tienes cuenta?
+  <a href="/register"> Registrate </a>
+</p>
 </div>
