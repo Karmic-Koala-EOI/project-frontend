@@ -47,4 +47,17 @@ export class SocialMediaService {
       return console.error(err);
     }
   }
+
+  async getTrendingTwitter(country : string) {
+    try {
+      const response = await axios.get("http://localhost:3000/tweets/trending", {
+        data: {
+          country: country
+        }
+      });
+      return response.data;
+    } catch (err) {
+      return console.error(err);
+    }
+  }
 }

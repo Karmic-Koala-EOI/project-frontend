@@ -11,7 +11,7 @@
                 <a class="btn btn-outline-success my-2 my-sm-0" href="" role="button">Home</a>
                 <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button" (click)="logout()">Cerrar sesion</a>
             </div>
-            <header>
+            <main>
                 <div class="card">
                     <div class="card-header">
                         Bienvenido al dashboard <span *ngIf="user !== null">{{user.userName}}</span>
@@ -23,7 +23,21 @@
                       </blockquote>
                     </div>
                   </div>
-            </header>
+
+                  <div class="card" *ngIf="trendingTwitter !== null">
+                    <div class="card-header">
+                      Trending topics de Twitter en <span *ngIf="user !== null">{{user.country}}</span>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center col-6" *ngFor="let trend of trendingTwitter">
+                          <a [href]="trend.url" target="_blank">{{ trend.name }}</a>
+                          <span class="badge badge-primary badge-pill">{{ trend.tweet_volume }}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </main>
             <footer>
                 <div class="foo">© Karmic Koala. Todos los derechos reservados <img src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" alt="" width="60" height="60"></div>
             </footer>
