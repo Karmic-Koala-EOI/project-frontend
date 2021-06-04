@@ -23,12 +23,8 @@ export class HomeComponent implements OnInit {
     this.AuthService.getUserLogged()
       .then(user => {if(user) {
         this.user = user;
-        //localStorage.setItem("isLogged", "true")
-        this.cookie.set("isLogged", "true")
       } else {
         this.user = null;
-        //localStorage.setItem("isLogged", "false")
-        this.cookie.set("isLogged", "false")
       }
       })
   }

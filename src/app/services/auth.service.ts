@@ -22,8 +22,7 @@ export class AuthService {
   }
 
   loged() {
-    
-    if (this.cookies.get("isLogged") !== "false") {
+    if (this.cookies.get("token") !== "") {
       return true;
     } else {
       return false;
