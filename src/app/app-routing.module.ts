@@ -7,6 +7,7 @@ import { PostContentComponent } from './components/post-content/post-content.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RemindPasswordComponent } from './components/remind-password/remind-password.component';
+import { UserIsLoggedGuard } from './guards/user-is-logged.guard';
 import { SocialMediaAccountsComponent } from './components/social-media-accounts/social-media-accounts.component';
 
 const routes: Routes = [{
@@ -27,21 +28,24 @@ const routes: Routes = [{
  },
  {
   path : "dashboard",
-  component : DashboardComponent
-  },
-  {
-   path : "dashboard/social-media-accounts",
-   component : SocialMediaAccountsComponent
-   },
-   {
-    path : "dashboard/post-content",
-    component : PostContentComponent
-    },
-    {
-     path : "dashboard/profile",
-     component : ProfileComponent
-     }
-
+  component : DashboardComponent,
+  canActivate: [UserIsLoggedGuard]
+},
+{
+ path : "dashboard/social-media-accounts",
+ component : SocialMediaAccountsComponent,
+ canActivate: [UserIsLoggedGuard]
+},
+{
+ path : "dashboard/post-content",
+ component : PostContentComponent,
+ canActivate: [UserIsLoggedGuard]
+},
+{
+ path : "dashboard/profile",
+ component : ProfileComponent,
+ canActivate: [UserIsLoggedGuard]
+ }
 ];
 
 @NgModule({

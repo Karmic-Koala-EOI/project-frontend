@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { CookieService } from "ngx-cookie-service";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,9 @@ export class HomeComponent implements OnInit {
 
   user: any = null;
 
-  constructor(private AuthService : AuthService) { }
+  constructor(private cookie : CookieService, private AuthService : AuthService) { }
+
+  loged : boolean = true;
 
   ngOnInit(): void {
     this.getUserLogged();
@@ -18,7 +21,6 @@ export class HomeComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      // .then(user => user ? this.user = user : this.user = null)
       .then(user => {
         if(user) {
           console.log(user);
