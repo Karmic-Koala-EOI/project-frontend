@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
       .then(res => {
         if(res){
         this.AuthService.setToken(res.token);
+        this.AuthService.setUser(res.usuario._id);
         this.Router.navigateByUrl('/');
         }
         else {

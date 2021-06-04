@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMediaService } from 'src/app/services/social-media.service';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { AuthService } from '../../services/auth.service';
 export class DashboardComponent implements OnInit {
 
   user: any = null;
+  trendingTwitter : any = null;
 
-  constructor(private AuthService : AuthService) { }
+  constructor(private AuthService : AuthService, private SocialMediaService : SocialMediaService) { }
 
   ngOnInit(): void {
     this.getUserLogged();
@@ -18,10 +20,27 @@ export class DashboardComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      .then(user => {
+        if(user) {
+          this.user = user;
+          this.getTrendingTwitter();
+        }
+        else {
+          this.user = null;
+        }
+      })
   }
 
   logout() {
     this.AuthService.logout();
+  }
+
+  getTrendingTwitter() {
+    console.log(this.user);
+    this.SocialMediaService.getTrendingTwitter(this.user.country)
+      .then(trending => {
+        this.trendingTwitter = trending.trends;
+        console.log(trending.trends);
+      })
   }
 }

@@ -21,11 +21,14 @@ export class HomeComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => {if(user) {
-        this.user = user;
-      } else {
-        this.user = null;
-      }
+      .then(user => {
+        if(user) {
+          console.log(user);
+          this.user = user;
+        }
+        else {
+          this.user = null
+        }
       })
   }
 
