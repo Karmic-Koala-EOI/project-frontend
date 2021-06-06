@@ -77,7 +77,34 @@ footer{
 
 .card{
     margin: 20px;
+    position: static;
+    max-height: 300px !important;
 }
+
+ul .list-group {
+        max-height: 300px !important;
+        scroll-behavior: smooth;
+
+}
+
+ul ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ul ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ul ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ul ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .descrip{
     margin: 20px;

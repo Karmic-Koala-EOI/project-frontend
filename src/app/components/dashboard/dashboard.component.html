@@ -3,13 +3,7 @@
     <app-dashboard-navbar></app-dashboard-navbar>
     <div class="main">
       <div *ngIf="user === null">
-          <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
-      </div>
-      <div *ngIf="user !== null">
-        <div class="d-flex">
-          <a href="" class="btn btn-outline-info ml-auto mt-3" role="button" aria-disabled="true">Home</a>
-          <a href="/" (click)="logout()" class="btn btn-info ml-2 mt-3 mr-3" role="button" aria-disabled="true">Log out</a>
-        </div>
+        <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
       </div>
       <main>
         <div class="card">
@@ -23,23 +17,20 @@
             </blockquote>
           </div>
         </div>
-                  
-                 <section>
-                  <div class="card" *ngIf="trendingTwitter !== null">
-                    <div class="card-header">
-                      Trending topics de Twitter en <span *ngIf="user !== null">{{user.country}}</span>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center col-6" *ngFor="let trend of trendingTwitter">
-                          <a [href]="trend.url" target="_blank">{{ trend.name }}</a>
-                          <span class="badge badge-primary badge-pill">{{ trend.tweet_volume }}</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                 </section>
-        </main>
+        <div class="card" *ngIf="trendingTwitter !== null">
+          <div class="card-header">
+            Trending topics de Twitter en <span *ngIf="user !== null">{{user.country}}</span>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center col-6" *ngFor="let trend of trendingTwitter">
+                <a [href]="trend.url" target="_blank">{{ trend.name }}</a>
+                <span class="badge badge-primary badge-pill">{{ trend.tweet_volume }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 </div>
