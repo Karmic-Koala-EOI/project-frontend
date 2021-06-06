@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
     console.log(this.user);
     this.SocialMediaService.getTrendingTwitter(this.user.country)
       .then(trending => {
-        this.trendingTwitter = trending.trends;
+        this.trendingTwitter = trending.trends.slice(0,5);
         console.log(trending.trends);
       })
   }

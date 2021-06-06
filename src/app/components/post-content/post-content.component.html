@@ -19,10 +19,10 @@
                         <input type="text" id="inputMessage" class="form-control" placeholder="Texto" formControlName="message" required autofocus>
                       </div>
 
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="inputPhotoURL">URL de la foto</label>
                         <input type="text" id="inputPhotoURL" class="form-control" placeholder="URL de la foto" formControlName="photo_url">
-                      </div>
+                      </div> -->
                       <div *ngIf="postError" class="alert alert-danger" role="alert"> 
                         Error al intentar publicar el tweet
                       </div>
