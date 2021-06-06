@@ -65,7 +65,7 @@ const routes: Routes = [{
 {
   path: "privacy-policy",
   component:RpgPrivacyPolicyComponent,
-}
+},
 ];
 
 @NgModule({

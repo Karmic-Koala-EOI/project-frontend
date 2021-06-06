@@ -18,6 +18,7 @@ import { DashboardNavbarComponent } from './components/dashboard-navbar/dashboar
 import { SocialMediaAccountsComponent } from './components/social-media-accounts/social-media-accounts.component';
 import { PostContentComponent } from './components/post-content/post-content.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     SocialMediaAccountsComponent,
     PostContentComponent,
     DashboardNavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

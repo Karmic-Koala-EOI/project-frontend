@@ -14,6 +14,7 @@
     background-color:lightgray;
     border: solid 2px rgb(148, 139, 125);
     border-left: solid 1px rgb(148, 139, 125);
+    height: auto;
 }
 .aside{
     display: flex;
@@ -58,18 +59,6 @@ header, main{
     margin: 20px;
 }
 
-footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    margin: auto;
-}
-
-.foo {
-    text-align: center;
-}
-
 .card-group{
     margin: 20px;
     border-radius: 5px;
@@ -77,11 +66,20 @@ footer{
 
 .card{
     margin: 20px;
+    position: static;
+}
+
+ul .list-group {
+        max-height: 300px !important;
+        scroll-behavior: smooth;
+
 }
 
 .descrip{
     margin: 20px;
 }
+
+
 
 @media screen and (max-width: 700px){
 

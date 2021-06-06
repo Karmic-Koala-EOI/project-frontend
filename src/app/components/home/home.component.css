@@ -66,3 +66,14 @@ footer {
 .text-gray-800 {
     color: #5a5c69 !important;
 }
+
+a i.fa-twitter:hover{
+    color: dodgerblue;
+}
+a i.fa-instagram:hover{
+    color: darkviolet;
+}
+li a.name-terms:hover{
+    color:black !important; 
+    text-decoration: none !important;
+}
