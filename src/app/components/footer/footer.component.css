@@ -1,0 +1,25 @@
+a i.fa-twitter:hover{
+    color: dodgerblue;
+}
+a i.fa-instagram:hover{
+    color: darkviolet;
+}
+li a.name-terms:hover{
+    color:black !important; 
+    text-decoration: none !important;
+}
+
+footer{
+    position: static;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    margin: auto;
+    background-size: 100% 85%;
+    padding: 40px 0 20px !important;
+    font-size: 0.75rem;
+}
+
+.foo {
+    text-align: center;
+}
