@@ -13,7 +13,7 @@ export class SocialMediaService {
     let userID = this.AuthService.getUserID();
 
     try {
-      const response = await axios.get("http://localhost:3000/auth/twitter", {
+      const response = await axios.get("https://karmic-koala-backend.vercel.app/auth/twitter", {
         params: {
           id: userID
         }
@@ -33,7 +33,7 @@ export class SocialMediaService {
     let userID = this.AuthService.getUserID();
     console.log(post);
     try {
-      const response = await axios.post("http://localhost:3000/postTweet", {
+      const response = await axios.post("https://karmic-koala-backend.vercel.app/postTweet", {
         query: {
           id: userID
         },
@@ -50,7 +50,7 @@ export class SocialMediaService {
 
   async getTrendingTwitter(country : string) {
     try {
-      const response = await axios.get("http://localhost:3000/tweets/trending", {
+      const response = await axios.get("https://karmic-koala-backend.vercel.app/tweets/trending", {
         data: {
           country: country
         }

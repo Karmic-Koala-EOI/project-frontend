@@ -9,7 +9,7 @@ export class ProfileService {
   constructor() { }
 
   async updateProfile(user: any, email: string, token: string) {
-    return axios.patch(`http://localhost:3000/${email}`, user, {
+    return axios.patch(`https://karmic-koala-backend.vercel.app/${email}`, user, {
       headers: {
         authorization: 'Bearer ' + token
       }
