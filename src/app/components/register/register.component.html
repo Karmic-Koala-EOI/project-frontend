@@ -1,6 +1,5 @@
 <div class="container-fluid text-center">
-    <form class="form-signup">
-      <div [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+  <form class="form-signup" [formGroup]="registerForm" (ngSubmit)="submitRegister()">
         <img routerLink="/" class="mb-4" src="https://cdn.iconscout.com/icon/free/png-512/koala-bear-lazy-honey-wild-animal-33903.png" width="60" height="60" alt="">
         <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
         <label for="inputUserName" class="sr-only">Nombre</label>
@@ -18,6 +17,6 @@
           <div class="or-label">or</div>
           <div class="line-separator"></div>
         </div>
-        <a  class="btn btn-outline-light my-2 my-sm-0" role="button" style="color:green;border-width: 1px; border-color: green ;" href="https://karmic-koala-backend.vercel.app/auth/google/callback" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</a>
-        
+        <a  class="btn btn-outline-light my-2 my-sm-0" role="button" style="color:green;border-width: 1px; border-color: green ;" href="http://localhost:3000/auth/google/callback" ><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Sign in with Google</a>
+  </form>
 </div>
