@@ -31,7 +31,6 @@ export class SocialMediaService {
 
   async postTwitter(post : any) {
     let userID = this.AuthService.getUserID();
-    console.log(post);
     try {
       const response = await axios.post("https://karmic-koala-backend.vercel.app/postTweet", {
         query: {
@@ -50,11 +49,7 @@ export class SocialMediaService {
 
   async getTrendingTwitter(country : string) {
     try {
-      const response = await axios.get("https://karmic-koala-backend.vercel.app/tweets/trending", {
-        data: {
-          country: country
-        }
-      });
+      const response = await axios.get(`https://karmic-koala-backend.vercel.app/tweets/trending/${country}`);
       return response.data;
     } catch (err) {
       return console.error(err);
