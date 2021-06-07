@@ -22,11 +22,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
  
- submitRegister() {
+  submitRegister() {
     this.AuthService.register(this.registerForm.value)
       .then(res => {
         if(res){ 
           this.AuthService.setToken(res.token);
+          this.AuthService.setUser(res.usuario._id);
           this.Router.navigateByUrl('/');
         }
         else {
