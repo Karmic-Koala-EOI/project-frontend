@@ -14,7 +14,7 @@ export class AuthService {
 
   // Login
   async login(user: any) : Promise<{token: string, usuario : any}> {
-    return axios.post("http://localhost:3000/login/", user)
+    return axios.post("https://karmic-koala-backend.vercel.app/login/", user)
     .then(response => response.data ? response.data : "Error en el login")
     .catch(err => console.error(err));
   }
@@ -30,7 +30,7 @@ export class AuthService {
 
   // Register
   async register(user: any) {
-    return axios.post("http://localhost:3000/register/", user, {
+    return axios.post("https://karmic-koala-backend.vercel.app/register/", user, {
       headers: {"Access-Control-Allow-Origin": "*"}
     })
     .then(response => response ? this.login(user) : response) 
@@ -64,7 +64,7 @@ export class AuthService {
   async getUserLogged() {
     const token = this.getToken();
     if(token) {
-      return axios.get("http://localhost:3000/", {
+      return axios.get("https://karmic-koala-backend.vercel.app/", {
       headers: {
         authorization: 'Bearer ' + token
       }
