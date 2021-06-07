@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialMediaService } from 'src/app/services/social-media.service';
 import { AuthService } from '../../services/auth.service';
+import { User, TrendingTwitter } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,8 +10,16 @@ import { AuthService } from '../../services/auth.service';
 })
 export class DashboardComponent implements OnInit {
 
-  user: any = null;
-  trendingTwitter : any = null;
+  user: User = {
+    _id: "",
+    userName: "",
+    email: "",
+    company: "",
+    country: "",
+    twitterLogged: false
+  };
+  
+  trendingTwitter : TrendingTwitter[] = [];
 
   constructor(private AuthService : AuthService, private SocialMediaService : SocialMediaService) { }
 
@@ -26,7 +35,14 @@ export class DashboardComponent implements OnInit {
           this.getTrendingTwitter();
         }
         else {
-          this.user = null;
+          this.user = {
+            _id: "",
+            userName: "",
+            email: "",
+            company: "",
+            country: "",
+            twitterLogged: false
+          };;
         }
       })
   }

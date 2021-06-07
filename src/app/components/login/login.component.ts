@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
     email: new FormControl(''),
     password: new FormControl(''),
   });
-  errorLog = false;
+
+  errorLog : boolean = false;
   
   constructor(private AuthService : AuthService, private Router : Router) { }
 
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
         this.Router.navigateByUrl('/');
         }
         else {
-          this.errorLog=true;
+          this.errorLog = true;
         }
       })
       .catch(e => {console.log(e)})

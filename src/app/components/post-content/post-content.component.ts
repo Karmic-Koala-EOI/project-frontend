@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { SocialMediaService } from 'src/app/services/social-media.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-post-content',
@@ -14,9 +15,18 @@ export class PostContentComponent implements OnInit {
     message: new FormControl(''),
     photo_url: new FormControl(''),
   });
-  postError = false;
-  postOk = false;
-  user: any = null;
+
+  postError : boolean = false;
+  postOk : boolean = false;
+
+  user: User = {
+    _id: "",
+    userName: "",
+    email: "",
+    company: "",
+    country: "",
+    twitterLogged: false
+  };
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService) { }
 
@@ -30,21 +40,28 @@ export class PostContentComponent implements OnInit {
     this.SocialMediaService.postTwitter(this.postTwitterForm.value)
       .then(res => {
         if(res){ 
-          this.postOk=true;
+          this.postOk = true;
         }
         else {
-          this.postError=true;
+          this.postError = true;
         }
       })
       .catch(error => {
         console.log(error);
-        this.postError=true;
+        this.postError = true;
       });
   }
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      .then(user => user ? this.user = user : this.user = {
+                                                _id: "",
+                                                userName: "",
+                                                email: "",
+                                                company: "",
+                                                country: "",
+                                                twitterLogged: false
+                                              });
   }
 
   logout() {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { CookieService } from "ngx-cookie-service";
+import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,14 @@ import { CookieService } from "ngx-cookie-service";
 })
 export class HomeComponent implements OnInit {
 
-  user: any = null;
+  user: User = {
+    _id: "",
+    userName: "",
+    email: "",
+    company: "",
+    country: "",
+    twitterLogged: false
+  };
 
   constructor(private cookie : CookieService, private AuthService : AuthService) { }
 
@@ -27,7 +35,14 @@ export class HomeComponent implements OnInit {
           this.user = user;
         }
         else {
-          this.user = null
+          this.user = {
+            _id: "",
+            userName: "",
+            email: "",
+            company: "",
+            country: "",
+            twitterLogged: false
+          };
         }
       })
   }

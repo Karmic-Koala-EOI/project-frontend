@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ProfileService } from 'src/app/services/profile.service';
 import { Router } from '@angular/router';
+import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-profile',
@@ -11,19 +12,23 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  user: {email: string, userName: string, company: string, country: string} = {
-    email: "",
+  user: User = {
+    _id: "",
     userName: "",
+    email: "",
     company: "",
-    country: ""
+    country: "",
+    twitterLogged: false
   };
+
   profileForm = new FormGroup({
     userName: new FormControl(''),
     company: new FormControl(''),
     country: new FormControl('')
   });
-  errorReg = false;
-  updateOk = false;
+  
+  errorReg : boolean = false;
+  updateOk : boolean = false;
 
   constructor(private AuthService : AuthService, private ProfileService : ProfileService, private Router : Router) { }
 
@@ -42,7 +47,14 @@ export class ProfileComponent implements OnInit {
           this.profileForm.setValue({userName: this.user.userName, company: this.user.company, country: this.user.country})
         }
         else {
-          this.user = {email: "", userName: "", company: "", country: ""};
+          this.user = {
+            _id: "",
+            userName: "",
+            email: "",
+            company: "",
+            country: "",
+            twitterLogged: false
+          };
         }
       })
   }

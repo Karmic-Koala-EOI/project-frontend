@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-rpg-cookies',
@@ -7,7 +8,14 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./rpg-cookies.component.css']
 })
 export class RPGCookiesComponent implements OnInit {
-  user: any = null;
+  user: User = {
+    _id: "",
+    userName: "",
+    email: "",
+    company: "",
+    country: "",
+    twitterLogged: false
+  };
 
   constructor(private AuthService : AuthService) { }
 
@@ -17,7 +25,14 @@ export class RPGCookiesComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      .then(user => user ? this.user = user : this.user = {
+                                                _id: "",
+                                                userName: "",
+                                                email: "",
+                                                company: "",
+                                                country: "",
+                                                twitterLogged: false
+                                              })
   }
 
   logout() {

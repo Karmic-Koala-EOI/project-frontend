@@ -3,6 +3,7 @@ import { SocialMediaService } from 'src/app/services/social-media.service'
 import { AuthService } from 'src/app/services/auth.service';
 import axios from 'axios';
 import { Router } from '@angular/router';
+import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-social-media-accounts',
@@ -12,7 +13,15 @@ import { Router } from '@angular/router';
 export class SocialMediaAccountsComponent implements OnInit {
 
   LoggedTwitter: boolean = false;
-  user: any = null;
+
+  user: User = {
+    _id: "",
+    userName: "",
+    email: "",
+    company: "",
+    country: "",
+    twitterLogged: false
+  };
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router) { }
 
@@ -40,7 +49,7 @@ export class SocialMediaAccountsComponent implements OnInit {
     // } catch (err) {
     //   return console.error(err);
     // }
-    window.location.href = `https://karmic-koala-backend.vercel.app/auth/twitter?id=${userID}`;
+    window.location.href = `http://localhost:3000/auth/twitter?id=${userID}`;
   }
 
   isLoggedTwitter() {
@@ -50,7 +59,14 @@ export class SocialMediaAccountsComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      .then(user => user ? this.user = user : this.user = {
+                                                _id: "",
+                                                userName: "",
+                                                email: "",
+                                                company: "",
+                                                country: "",
+                                                twitterLogged: false
+                                              });
   }
 
   logout() {
