@@ -7,7 +7,7 @@
     border-right: solid 1px rgb(65, 139, 115);
     max-width: 150px;
     min-width: 100px;
-    height: auto;
+    height: 100%;
 }
 
 .aside a {
