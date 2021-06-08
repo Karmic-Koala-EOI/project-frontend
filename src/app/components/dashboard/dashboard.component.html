@@ -2,13 +2,10 @@
   <div class="row-dash">
     <app-dashboard-navbar></app-dashboard-navbar>
     <div class="main">
-      <div *ngIf="user === null">
-        <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
-      </div>
       <main>
         <div class="card">
           <div class="card-header">
-            Bienvenido al dashboard <span *ngIf="user !== null">{{user.userName}}</span>
+            Bienvenido al dashboard {{user.userName}}
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
@@ -17,9 +14,9 @@
             </blockquote>
           </div>
         </div>
-        <div class="card" *ngIf="trendingTwitter !== null">
+        <div class="card" *ngIf="trendingTwitter.length > 0">
           <div class="card-header">
-            Trending topics de Twitter <span *ngIf="user !== null">en {{user.country}}</span>
+            Trending topics de Twitter<span *ngIf="user.country == 'Global'"> {{user.country}}</span><span *ngIf="user.country !== 'Global' && user.country !== undefined"> en {{user.country}}</span>
           </div>
           <div class="card-body">
             <ul class="list-group">

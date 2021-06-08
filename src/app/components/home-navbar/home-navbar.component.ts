@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { SocialMediaService } from 'src/app/services/social-media.service';
-import { AuthService } from '../../services/auth.service';
-import { User, TrendingTwitter } from 'src/interfaces/interfaces';
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/interfaces/interfaces';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-home-navbar',
+  templateUrl: './home-navbar.component.html',
+  styleUrls: ['./home-navbar.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class HomeNavbarComponent implements OnInit {
 
   user: User = {
     _id: "",
@@ -20,10 +19,8 @@ export class DashboardComponent implements OnInit {
   };
 
   userLogged : boolean = false;
-  
-  trendingTwitter : TrendingTwitter[] = [];
 
-  constructor(private AuthService : AuthService, private SocialMediaService : SocialMediaService) { }
+  constructor(private AuthService : AuthService) { }
 
   ngOnInit(): void {
     this.getUserLogged();
@@ -33,9 +30,9 @@ export class DashboardComponent implements OnInit {
     this.AuthService.getUserLogged()
       .then(user => {
         if(user) {
+          console.log(user);
           this.user = user;
           this.userLogged =  true;
-          this.getTrendingTwitter();
         }
         else {
           this.user = {
@@ -55,10 +52,4 @@ export class DashboardComponent implements OnInit {
     this.AuthService.logout();
   }
 
-  getTrendingTwitter() {
-    this.SocialMediaService.getTrendingTwitter(this.user.country)
-      .then(trending => {
-        this.trendingTwitter = trending.trends.slice(0,5);
-      })
-  }
 }

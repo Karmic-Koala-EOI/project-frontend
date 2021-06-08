@@ -16,7 +16,7 @@ export class SocialMediaService {
     try {
       const response = await axios.get("http://localhost:3000/auth/twitter", {
         params: {
-          id: userID
+          _id: userID
         }
       });
       return response ? response.data : "Error en el login";
@@ -36,7 +36,7 @@ export class SocialMediaService {
     try {
       const response = await axios.post("http://localhost:3000/postTweet", {
         query: {
-          id: userID
+          _id: userID
         },
         data: {
           message: post.message,

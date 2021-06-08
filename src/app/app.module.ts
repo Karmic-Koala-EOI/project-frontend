@@ -19,6 +19,7 @@ import { SocialMediaAccountsComponent } from './components/social-media-accounts
 import { PostContentComponent } from './components/post-content/post-content.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeNavbarComponent } from './components/home-navbar/home-navbar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FooterComponent } from './components/footer/footer.component';
     PostContentComponent,
     DashboardNavbarComponent,
     ProfileComponent,
-    FooterComponent
+    FooterComponent,
+    HomeNavbarComponent
   ],
   imports: [
     BrowserModule,

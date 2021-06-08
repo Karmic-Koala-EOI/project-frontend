@@ -44,7 +44,7 @@ export class AuthService {
   }
 
   setUser(id: string) {
-    this.cookies.set("id", id);
+    this.cookies.set("_id", id);
   }
 
   getToken() {
@@ -52,12 +52,12 @@ export class AuthService {
   }
   
   getUserID() {
-    return this.cookies.get("id");
+    return this.cookies.get("_id");
   }
 
   logout() {
     this.cookies.delete("session");
-    this.cookies.delete("id");
+    this.cookies.delete("_id");
     this.Router.navigateByUrl('/');
   }
 

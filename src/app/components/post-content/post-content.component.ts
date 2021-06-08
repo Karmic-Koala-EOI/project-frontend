@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { SocialMediaService } from 'src/app/services/social-media.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-post-content',
@@ -19,14 +18,7 @@ export class PostContentComponent implements OnInit {
   postError : boolean = false;
   postOk : boolean = false;
 
-  user: User = {
-    _id: "",
-    userName: "",
-    email: "",
-    company: "",
-    country: "",
-    twitterLogged: false
-  };
+  twitterLogged : boolean = false;
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService) { }
 
@@ -54,18 +46,6 @@ export class PostContentComponent implements OnInit {
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = {
-                                                _id: "",
-                                                userName: "",
-                                                email: "",
-                                                company: "",
-                                                country: "",
-                                                twitterLogged: false
-                                              });
+      .then(user => user ? this.twitterLogged =  user.twitterLogged : this.twitterLogged =  false)
   }
-
-  logout() {
-    this.AuthService.logout();
-  }
-
 }

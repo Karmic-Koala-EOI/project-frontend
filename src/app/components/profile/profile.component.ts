@@ -59,27 +59,22 @@ export class ProfileComponent implements OnInit {
       })
   }
 
-  logout() {
-    this.AuthService.logout();
-  }
-
   submitProfile() {
-    this.errorReg=false;
-    this.updateOk=false;
+    this.errorReg = false;
+    this.updateOk = false;
     this.ProfileService.updateProfile(this.profileForm.value, this.user.email, this.AuthService.getToken())
       .then(res => {
         if(res){ 
           this.Router.navigateByUrl('/dashboard/profile');
-          this.updateOk=true;
+          this.updateOk = true;
         }
         else {
-          this.errorReg=true;
+          this.errorReg = true;
         }
       })
       .catch(error => {
         console.log(error);
-        this.errorReg=true;
+        this.errorReg = true;
       });
   }
-
 }

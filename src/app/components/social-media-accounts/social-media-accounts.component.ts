@@ -3,7 +3,6 @@ import { SocialMediaService } from 'src/app/services/social-media.service'
 import { AuthService } from 'src/app/services/auth.service';
 import axios from 'axios';
 import { Router } from '@angular/router';
-import { User } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-social-media-accounts',
@@ -12,22 +11,12 @@ import { User } from 'src/interfaces/interfaces';
 })
 export class SocialMediaAccountsComponent implements OnInit {
 
-  LoggedTwitter: boolean = false;
-
-  user: User = {
-    _id: "",
-    userName: "",
-    email: "",
-    company: "",
-    country: "",
-    twitterLogged: false
-  };
+  LoggedTwitter : boolean = false;
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router) { }
 
   ngOnInit(): void {
     this.isLoggedTwitter();
-    this.getUserLogged();
   }
 
   // loginTwitter() {
@@ -49,28 +38,11 @@ export class SocialMediaAccountsComponent implements OnInit {
     // } catch (err) {
     //   return console.error(err);
     // }
-    window.location.href = `http://localhost:3000/auth/twitter?id=${userID}`;
+    window.location.href = `http://localhost:3000/auth/twitter?_id=${userID}`;
   }
 
   isLoggedTwitter() {
     this.SocialMediaService.isLoggedTwitter()
       .then(logged => this.LoggedTwitter = logged);
   }
-
-  getUserLogged() {
-    this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = {
-                                                _id: "",
-                                                userName: "",
-                                                email: "",
-                                                company: "",
-                                                country: "",
-                                                twitterLogged: false
-                                              });
-  }
-
-  logout() {
-    this.AuthService.logout();
-  }
-
 }

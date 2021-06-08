@@ -2,51 +2,46 @@
     <div class="row-dash">
         <app-dashboard-navbar></app-dashboard-navbar>
         <div class="main">
-            <div *ngIf="user === null">
-              <div >
-                <!-- hacer un alert para cuando noo estes registrado no te deje entrar -->
-              </div>
-            </div>
-            <header>
-                <div class="card">
-                    <div class="card-header">
-                      Información de perfil
-                    </div>
-                    <div class="card-body">
-                      <form class="form-post-twitter" [formGroup]="profileForm" (ngSubmit)="submitProfile()">
-                        <div class="form-group">
-                          <label for="inputUsername">Nombre</label>
-                          <input type="text" id="inputUsername" class="form-control" placeholder="Nombre" formControlName="userName">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="inputCompany">Empresa</label>
-                          <input type="text" id="inputCompany" class="form-control" placeholder="Empresa" formControlName="company">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="inputCountry">País</label>
-                          <select id="inputCountry" name="country" class="form-control" placeholder="País" formControlName="country">
-                            <option value="Global">Global</option>
-                            <option value="Belgium">Belgium</option>
-                            <option value="Denmark">Denmark</option>
-                            <option value="France">France</option>
-                            <option value="Germany">Germany</option>
-                            <option value="Spain">Spain</option>
-                          </select>
-                        </div>
-                        <div *ngIf="errorReg" class="alert alert-danger" role="alert"> 
-                          Error al intentar actualiazar el perfil
-                        </div>
-                        <div *ngIf="updateOk" class="alert alert-success" role="alert"> 
-                          Datos actualizados correctamente
-                        </div>
-                        <br />
-                        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
-                      </form>
-                    </div>
+          <header>
+              <div class="card">
+                  <div class="card-header">
+                    Información de perfil
                   </div>
-            </header>
+                  <div class="card-body">
+                    <form class="form-post-twitter" [formGroup]="profileForm" (ngSubmit)="submitProfile()">
+                      <div class="form-group">
+                        <label for="inputUsername">Nombre</label>
+                        <input type="text" id="inputUsername" class="form-control" placeholder="Nombre" formControlName="userName">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inputCompany">Empresa</label>
+                        <input type="text" id="inputCompany" class="form-control" placeholder="Empresa" formControlName="company">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inputCountry">País</label>
+                        <select id="inputCountry" name="country" class="form-control" placeholder="País" formControlName="country">
+                          <option value="Global">Global</option>
+                          <option value="Belgium">Belgium</option>
+                          <option value="Denmark">Denmark</option>
+                          <option value="France">France</option>
+                          <option value="Germany">Germany</option>
+                          <option value="Spain">Spain</option>
+                        </select>
+                      </div>
+                      <div *ngIf="errorReg" class="alert alert-danger" role="alert"> 
+                        Error al intentar actualiazar el perfil
+                      </div>
+                      <div *ngIf="updateOk" class="alert alert-success" role="alert"> 
+                        Datos actualizados correctamente
+                      </div>
+                      <br />
+                      <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
+                    </form>
+                  </div>
+                </div>
+          </header>
         </div>
     </div>
   </div>
