@@ -17,5 +17,5 @@ export interface TrendingTwitter {
 
 export interface PostTwitter {
     message: string,
-    photo_url: string
+    photo_url: Blob
 }
