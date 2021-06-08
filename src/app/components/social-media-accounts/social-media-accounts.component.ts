@@ -11,14 +11,12 @@ import { Router } from '@angular/router';
 })
 export class SocialMediaAccountsComponent implements OnInit {
 
-  LoggedTwitter: boolean = false;
-  user: any = null;
+  LoggedTwitter : boolean = false;
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router) { }
 
   ngOnInit(): void {
     this.isLoggedTwitter();
-    this.getUserLogged();
   }
 
   // loginTwitter() {
@@ -40,21 +38,11 @@ export class SocialMediaAccountsComponent implements OnInit {
     // } catch (err) {
     //   return console.error(err);
     // }
-    window.location.href = `https://karmic-koala-backend.vercel.app/auth/twitter?id=${userID}`;
+    window.location.href = `http://localhost:3000/auth/twitter?_id=${userID}`;
   }
 
   isLoggedTwitter() {
     this.SocialMediaService.isLoggedTwitter()
       .then(logged => this.LoggedTwitter = logged);
   }
-
-  getUserLogged() {
-    this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
-  }
-
-  logout() {
-    this.AuthService.logout();
-  }
-
 }

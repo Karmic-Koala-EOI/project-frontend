@@ -14,9 +14,11 @@ export class PostContentComponent implements OnInit {
     message: new FormControl(''),
     photo_url: new FormControl(''),
   });
-  postError = false;
-  postOk = false;
-  user: any = null;
+
+  postError : boolean = false;
+  postOk : boolean = false;
+
+  twitterLogged : boolean = false;
 
   constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService) { }
 
@@ -30,25 +32,20 @@ export class PostContentComponent implements OnInit {
     this.SocialMediaService.postTwitter(this.postTwitterForm.value)
       .then(res => {
         if(res){ 
-          this.postOk=true;
+          this.postOk = true;
         }
         else {
-          this.postError=true;
+          this.postError = true;
         }
       })
       .catch(error => {
         console.log(error);
-        this.postError=true;
+        this.postError = true;
       });
   }
 
   getUserLogged() {
     this.AuthService.getUserLogged()
-      .then(user => user ? this.user = user : this.user = null)
+      .then(user => user ? this.twitterLogged =  user.twitterLogged : this.twitterLogged =  false)
   }
-
-  logout() {
-    this.AuthService.logout();
-  }
-
 }

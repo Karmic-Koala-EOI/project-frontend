@@ -15,7 +15,8 @@ export class RegisterComponent implements OnInit {
     email: new FormControl(''),
     password: new FormControl(''),
   });
-  errorReg = false;
+
+  errorReg : boolean = false;
 
   constructor(private AuthService :  AuthService, private Router : Router) { }
 
@@ -31,11 +32,12 @@ export class RegisterComponent implements OnInit {
           this.Router.navigateByUrl('/');
         }
         else {
-          this.errorReg=true;
+          this.errorReg = true;
         }
       })
       .catch(error => {
         console.log(error);
+        this.errorReg = true;
       });
   }
 }

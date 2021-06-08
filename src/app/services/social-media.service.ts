@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { AuthService } from './auth.service';
+import { PostTwitter } from 'src/interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,9 @@ export class SocialMediaService {
     let userID = this.AuthService.getUserID();
 
     try {
-      const response = await axios.get("https://karmic-koala-backend.vercel.app/auth/twitter", {
+      const response = await axios.get("http://localhost:3000/auth/twitter", {
         params: {
-          id: userID
+          _id: userID
         }
       });
       return response ? response.data : "Error en el login";
@@ -29,12 +30,13 @@ export class SocialMediaService {
       .then(user => user.twitterLogged);
   }
 
-  async postTwitter(post : any) {
+  async postTwitter(post : PostTwitter) {
+    console.log(post);
     let userID = this.AuthService.getUserID();
     try {
-      const response = await axios.post("https://karmic-koala-backend.vercel.app/postTweet", {
+      const response = await axios.post("http://localhost:3000/postTweet", {
         query: {
-          id: userID
+          _id: userID
         },
         data: {
           message: post.message,
@@ -49,7 +51,7 @@ export class SocialMediaService {
 
   async getTrendingTwitter(country : string) {
     try {
-      const response = await axios.get(`https://karmic-koala-backend.vercel.app/tweets/trending/${country}`);
+      const response = await axios.get(`http://localhost:3000/tweets/trending/${country}`);
       return response.data;
     } catch (err) {
       return console.error(err);

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+import { User } from 'src/interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,8 @@ export class ProfileService {
 
   constructor() { }
 
-  async updateProfile(user: any, email: string, token: string) {
-    return axios.patch(`https://karmic-koala-backend.vercel.app/${email}`, user, {
+  async updateProfile(user: User, email: string, token: string) {
+    return axios.patch(`http://localhost:3000/${email}`, user, {
       headers: {
         authorization: 'Bearer ' + token
       }
