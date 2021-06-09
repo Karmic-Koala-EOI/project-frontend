@@ -11,11 +11,11 @@
                   <form class="form-post-twitter" [formGroup]="postTwitterForm" (ngSubmit)="submitPostTwitter($event)">
                     <div class="form-group">
                       <label for="inputMessage">Texto</label>
-                      <input type="text" id="inputMessage" class="form-control" placeholder="Texto" formControlName="message" required autofocus>
+                      <input type="text" id="inputMessage" class="form-control" placeholder="Texto" formControlName="message" autofocus>
                     </div>
 
                     <div class="form-group">
-                      <label for="inputPhotoURL">URL de la foto</label>
+                      <label for="inputPhotoURL">Cargar imagen</label>
                       <input type="file" id="inputPhotoURL" class="form-control" placeholder="URL de la foto" formControlName="photo_url">
                     </div>
                     <div *ngIf="postError" class="alert alert-danger" role="alert"> 
