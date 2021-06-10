@@ -75,13 +75,13 @@
     text-align: center
 }
 
-input:invalid{
+/* input:invalid{
   border-color: rgb(241, 82, 82);
 }
 
 input:valid{
   border-color: rgb(132, 235, 132);
-}
+} */
 
 input:placeholder-shown{
   border-color: rgb(168, 167, 168);

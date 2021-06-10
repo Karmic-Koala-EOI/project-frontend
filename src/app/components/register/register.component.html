@@ -8,11 +8,11 @@
     <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email"  formControlName="email" required>
     <label for="inputPassword" class="sr-only">Contraseña</label>
     <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Contraseña" formControlName="password" required>    
-    <div *ngIf="errorReg" class="alert alert-danger alert-dismissible fade show" role="alert" > 
+    <div *ngIf="errorReg" class="alert alert-danger" role="alert" > 
       Debes introducir un nombre, un correo y una contraseña validos
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
-      </button>
+      </button> -->
     </div>
     <button type="submit" class="btn btn-outline-success my-2 my-sm-0"> Registrarse </button>
     <!-- <div class="or-container">
