@@ -4,7 +4,8 @@ export interface User {
     email: string,
     company: string,
     country: string,
-    twitterLogged: boolean
+    twitterLogged: boolean,
+    twitterUserName: string
 }
 
 export interface TrendingTwitter {

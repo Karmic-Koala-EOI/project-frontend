@@ -19,9 +19,13 @@
                                         <h5 class="font-weight-bold mt-4 mb-3">Twitter</h5>
                                         <div *ngIf="LoggedTwitter">
                                             <p>Cuenta vinculada correctamente</p>
+                                            <button type="button" (click)="unlinkTwitter()" class="btn btn-primary">Desvincular cuenta</button>
                                         </div>
                                         <div *ngIf="!LoggedTwitter">
                                             <button type="button" (click)="loginTwitter()" class="btn btn-primary">Vincular cuenta</button>
+                                        </div>
+                                        <div *ngIf="unlinkError" class="alert alert-danger" role="alert"> 
+                                            Error al intentar desvincular la cuenta
                                         </div>
                                     </div>  
                                 </div>

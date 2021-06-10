@@ -3,6 +3,7 @@ import { SocialMediaService } from 'src/app/services/social-media.service'
 import { AuthService } from 'src/app/services/auth.service';
 import axios from 'axios';
 import { Router } from '@angular/router';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-social-media-accounts',
@@ -12,8 +13,9 @@ import { Router } from '@angular/router';
 export class SocialMediaAccountsComponent implements OnInit {
 
   LoggedTwitter : boolean = false;
+  unlinkError : boolean = false;
 
-  constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router) { }
+  constructor(private SocialMediaService : SocialMediaService, private AuthService : AuthService, private Router : Router, private ProfileService : ProfileService) { }
 
   ngOnInit(): void {
     this.isLoggedTwitter();
@@ -39,6 +41,31 @@ export class SocialMediaAccountsComponent implements OnInit {
     //   return console.error(err);
     // }
     window.location.href = `http://localhost:3000/auth/twitter?_id=${userID}`;
+  }
+
+  unlinkTwitter() {
+    let modUser = {tokenTwitter: "", tokenSecretTwitter: ""};
+    this.AuthService.getUserLogged()
+      .then(user => {
+        if(user) {
+          this.ProfileService.unlinkTwitter(modUser, user.email, this.AuthService.getToken())
+            .then(res => {
+              if(res){ 
+                this.LoggedTwitter = false;
+              }
+              else {
+                this.unlinkError = true;
+              }
+            })
+            .catch(error => {
+              console.log(error);
+              this.unlinkError = true;
+            });
+        }
+        else {
+          this.unlinkError = true;
+        }
+      })
   }
 
   isLoggedTwitter() {

@@ -86,4 +86,16 @@ export class SocialMediaService {
       return console.error(err);
     }
   }
+
+  async getTwitterStats() {
+    try {
+      const user = await this.AuthService.getUserLogged();
+      console.log(user);
+      const userTwitter = user.twitterUserName;
+      const response = await axios.get(`http://localhost:3000/tweets/${userTwitter}`);
+      return response.data;
+    } catch (err) {
+      return console.error(err);
+    }
+  }
 }
