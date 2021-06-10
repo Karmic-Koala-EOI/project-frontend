@@ -11,14 +11,17 @@
                   <form class="form-post-twitter" [formGroup]="postTwitterForm" (ngSubmit)="submitPostTwitter($event)">
                     <div class="form-group">
                       <label for="inputMessage">Texto</label>
-                      <input type="text" id="inputMessage" class="form-control" placeholder="Texto" formControlName="message" autofocus>
+                      <textarea id="inputMessage" class="form-control" cols="50" rows="6" placeholder="Insert your tweet" formControlName="message" autofocus></textarea>
                     </div>
-
+                    <br>
                     <div class="form-group">
-                      <label for="inputPhotoURL">Cargar imagen</label>
-                      <input type="file" id="inputPhotoURL" class="form-control" placeholder="URL de la foto" formControlName="photo_url">
+                      <input type="file" id="inputPhotoURL" class="form-control" accept="image/*" formControlName="photo_url">
+                      <label id="inputFile" for="inputPhotoURL">
+                        <i class="fas fa-images"></i> &nbsp;
+                        Choose an Image
+                      </label>
                     </div>
-                    <div *ngIf="postError" class="alert alert-danger" role="alert"> 
+                    <div *ngIf="postError" class="alert alert-info" role="alert"> 
                       Error al intentar publicar el tweet
                     </div>
                     <div *ngIf="postOk" class="alert alert-success" role="alert"> 
@@ -29,7 +32,7 @@
                   </form>
                 </div>
                 <div *ngIf="!twitterLogged" class="card-body">
-                    <div class="alert alert-danger" role="alert"> 
+                    <div class="alert alert-info" role="alert"> 
                       Para poder twittear necesitas tener una cuenta de Twitter vinculada
                     </div>
                 </div>

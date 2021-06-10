@@ -11,12 +11,12 @@
                     <form class="form-post-twitter" [formGroup]="profileForm" (ngSubmit)="submitProfile()">
                       <div class="form-group">
                         <label for="inputUsername">Nombre</label>
-                        <input type="text" id="inputUsername" class="form-control" placeholder="Nombre" formControlName="userName">
+                        <input type="search" id="inputUsername" class="form-control" placeholder="Nombre" formControlName="userName">
                       </div>
 
                       <div class="form-group">
                         <label for="inputCompany">Empresa</label>
-                        <input type="text" id="inputCompany" class="form-control" placeholder="Empresa" formControlName="company">
+                        <input type="search" id="inputCompany" class="form-control" placeholder="Empresa" formControlName="company">
                       </div>
 
                       <div class="form-group">
@@ -30,14 +30,14 @@
                           <option value="Spain">Spain</option>
                         </select>
                       </div>
-                      <div *ngIf="errorReg" class="alert alert-danger" role="alert"> 
-                        Error al intentar actualiazar el perfil
+                      <div *ngIf="errorReg" class="alert alert-info" role="alert"> 
+                        Error al intentar actualizar el perfil
                       </div>
                       <div *ngIf="updateOk" class="alert alert-success" role="alert"> 
                         Datos actualizados correctamente
                       </div>
                       <br />
-                      <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
+                      <button type="submit" class="btn btn-primary btn-block my-2 my-sm-0">Enviar</button>
                     </form>
                   </div>
                 </div>
@@ -45,5 +45,6 @@
         </div>
     </div>
   </div>
+
 
 <app-footer></app-footer>

@@ -1,4 +1,5 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
   .container-fluid {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -236,13 +237,64 @@ footer{
   text-align: center;
 }
 
+
+.card-header{
+  font-style: initial;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #6c28da, #aee0dc);
+}
+
+label{
+  font-style:inherit;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+
 .card-group{
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .card{
-  margin: 20px;
+  margin-left: 27%;
+  margin-right: 20%;
+  margin-top: 5%;
+  background: #c2e2e29c;
+  opacity: 5px;
+}
+
+.form-post-twitter{
+  background: #c2e2e29c;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    border-color: transparent;
+    background-color: #5109c5;
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#inputPhotoURL{
+  display: none;
+}
+
+#inputFile{
+  color: white;
+  background-color: rgb(15, 79, 197);
+  height: 15px;
+  width: 100px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 4px;
 }
 
 .descrip{

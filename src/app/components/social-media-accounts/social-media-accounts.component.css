@@ -1,4 +1,6 @@
-.container-dash{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+ 
+ .container-dash{
     display: flex;
     flex-direction: column;
 }
@@ -70,14 +72,31 @@ footer{
     text-align: center;
 }
 
-.card-group{
+.card-header{
+    font-style: initial;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #6c28da, #aee0dc);
+  }
+  
+  label{
+    font-style:inherit;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+  }
+  
+  .card-group{
     margin: 20px;
-    border-radius: 5px;
-}
-
-.card{
-    margin: 20px;
-}
+    border-radius: 20px;
+  }
+  
+  .card{
+    margin-left: 27%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background: #c2e2e29c;
+    opacity: 5px;
+  }
+  
 
 .descrip{
     margin: 20px;
@@ -85,4 +104,4 @@ footer{
 
 @media screen and (max-width: 700px){
 
-}
+} 

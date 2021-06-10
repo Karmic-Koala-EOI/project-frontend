@@ -1,22 +1,7 @@
-.aside{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #AFF6CF;
-    border: solid 2px rgb(65, 139, 115);
-    border-right: solid 1px rgb(65, 139, 115);
-    max-width: 150px;
-    min-width: 100px;
-    height: auto;
-}
-
-.aside a {
-    height: 60px;
-}
-
-.img-profile{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+ /*.img-profile{
     /* HACER RESPONSIVE Y QUE ESCALEN LOS ICONOS */
-    margin: 20px;
+    /* margin: 20px;
     background-color: darkgray;
     border-radius: 100%;
     width: 60px;
@@ -29,4 +14,184 @@
 
 .dashboard{
     margin: 20px;
+} */ 
+
+/* :root {
+    --primary: #a60fe2 !important;
+    --light: #ffffff;
+    --grey: #efefef;
 }
+
+body{
+    overflow: hidden;
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+.bg-primary{
+    background-color: var(--primary) !important;
+} */
+
+.navigation{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #8956db, #aee0dc);
+    position:absolute;
+    width: 60px;
+    transition: 0.5s;  
+    overflow: hidden;
+}
+
+.navigation:hover,
+.navigation:active{
+    width: 300px; 
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover{
+    transform: scale(1.1);
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa{
+    font-size: 24px;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* .toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #1ba1aa, #aee0dc);
+    cursor: pointer;
+} */
+
+/* .toggle:active{
+    background: linear-gradient(to bottom, #1ba1aa, #aee0dc);
+}
+
+.toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: linear-gradient(to bottom, #1ba1aa, #aee0dc);
+}
+
+.toggle:active:before{
+    content: '\f00d';
+} */
+
+@media (max-width: 767px){
+    .navigation{
+        left: -60px;
+    }
+    .navigation.active{
+        left: 0px;
+        width: 100%;
+    }
+}
+
+
+/* #sidebar-container .logo{
+    padding: .875rem 1.25rem;
+}
+
+#sidebar-container .menu{
+    width: 11rem;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+    padding: 10px;
+    color:#000000 !important;
+    font-style:inherit;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color:#000000;
+}
+   
+.menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+   
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+   
+.menu a:hover span:last-child {
+    transform: none;
+}
+
+.menu[data-animation="to-top"] a span:last-child {
+    transform: translateY(100%);
+}
+   
+.menu[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+} 
+
+.menu i{
+    color: black 1px solid;
+} */
