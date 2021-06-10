@@ -20,7 +20,7 @@ export class ProfileService {
   }
 
   async unlinkTwitter(user: {tokenTwitter: string, tokenSecretTwitter: string}, email: string, token: string) {
-    return axios.patch(`http://localhost:3000/${email}`, user, {
+    return axios.patch(`https://karmic-koala-backend.vercel.app/${email}`, user, {
       headers: {
         authorization: 'Bearer ' + token
       }
