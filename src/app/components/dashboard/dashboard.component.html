@@ -27,6 +27,14 @@
             </ul>
           </div>
         </div>
+        <div class="card" *ngIf="trendingTwitter.length > 0">
+          <div class="card-header">
+            Estadísticas
+          </div>
+          <div class="card-body">
+            <app-stats></app-stats>
+          </div>
+        </div>
       </main>
     </div>
   </div>

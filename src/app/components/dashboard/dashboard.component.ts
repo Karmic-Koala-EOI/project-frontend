@@ -16,7 +16,8 @@ export class DashboardComponent implements OnInit {
     email: "",
     company: "",
     country: "",
-    twitterLogged: false
+    twitterLogged: false,
+    twitterUserName: ""
   };
 
   userLogged : boolean = false;
@@ -44,7 +45,8 @@ export class DashboardComponent implements OnInit {
             email: "",
             company: "",
             country: "",
-            twitterLogged: false
+            twitterLogged: false,
+            twitterUserName: ""
           };
           this.userLogged =  false;
         }

@@ -18,4 +18,14 @@ export class ProfileService {
     .then(response => response) 
     .catch(err => console.error(err));
   }
+
+  async unlinkTwitter(user: {tokenTwitter: string, tokenSecretTwitter: string}, email: string, token: string) {
+    return axios.patch(`http://localhost:3000/${email}`, user, {
+      headers: {
+        authorization: 'Bearer ' + token
+      }
+      })
+    .then(response => response) 
+    .catch(err => console.error(err));
+  }
 }

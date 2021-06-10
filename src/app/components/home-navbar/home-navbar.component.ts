@@ -15,7 +15,8 @@ export class HomeNavbarComponent implements OnInit {
     email: "",
     company: "",
     country: "",
-    twitterLogged: false
+    twitterLogged: false,
+    twitterUserName: ""
   };
 
   userLogged : boolean = false;
@@ -41,7 +42,8 @@ export class HomeNavbarComponent implements OnInit {
             email: "",
             company: "",
             country: "",
-            twitterLogged: false
+            twitterLogged: false,
+            twitterUserName: ""
           };
           this.userLogged =  false;
         }

@@ -4,7 +4,8 @@ export interface User {
     email: string,
     company: string,
     country: string,
-    twitterLogged: boolean
+    twitterLogged: boolean,
+    twitterUserName: string
 }
 
 export interface TrendingTwitter {
@@ -17,5 +18,5 @@ export interface TrendingTwitter {
 
 export interface PostTwitter {
     message: string,
-    photo_url: string
+    photo_url: Blob
 }

@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   });
 
   errorReg : boolean = false;
-
+ 
   constructor(private AuthService :  AuthService, private Router : Router) { }
 
   ngOnInit(): void {
@@ -40,4 +40,6 @@ export class RegisterComponent implements OnInit {
         this.errorReg = true;
       });
   }
+
+
 }

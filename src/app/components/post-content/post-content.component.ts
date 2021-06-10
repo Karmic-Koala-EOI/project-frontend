@@ -12,7 +12,7 @@ export class PostContentComponent implements OnInit {
 
   postTwitterForm = new FormGroup({
     message: new FormControl(''),
-    photo_url: new FormControl(''),
+    photo_url: new FormControl(null),
   });
 
   postError : boolean = false;
@@ -26,9 +26,14 @@ export class PostContentComponent implements OnInit {
     this.getUserLogged();
   }
 
-  submitPostTwitter() {
+  submitPostTwitter(event : any) {
     this.postError = false;
     this.postOk = false;
+
+    let file = event.target[1].files[0];
+
+    this.postTwitterForm.value.photo_url = file;
+
     this.SocialMediaService.postTwitter(this.postTwitterForm.value)
       .then(res => {
         if(res){ 

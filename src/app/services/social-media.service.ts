@@ -31,27 +31,67 @@ export class SocialMediaService {
   }
 
   async postTwitter(post : PostTwitter) {
-    console.log(post);
     let userID = this.AuthService.getUserID();
-    try {
-      const response = await axios.post("https://karmic-koala-backend.vercel.app/postTweet", {
-        query: {
-          _id: userID
-        },
-        data: {
-          message: post.message,
-          photo_url: post.photo_url
+
+    if (post.photo_url !== undefined) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = async () => {
+          const binaryString = reader.result;
+          const base64PhotoFile = btoa(binaryString as string);
+          try {
+            const response = await axios.post("http://localhost:3000/postTweet", {
+              query: {
+                _id: userID
+              },
+              data: {
+                message: post.message,
+                photo_url: base64PhotoFile
+              }
+            });
+            resolve(response.data)
+          } 
+          catch (err) {
+            console.error(err);
+            reject(err)
+          }
         }
-      });
-      return response.data;
-    } catch (err) {
-      return console.error(err);
+        reader.readAsBinaryString(post.photo_url);
+      })     
+    }
+    else {
+      try {
+        const response = await axios.post("http://localhost:3000/postTweet", {
+          query: {
+            _id: userID
+          },
+          data: {
+            message: post.message,
+            photo_url: ""
+          }
+        });
+        return response.data;
+      } 
+      catch (err) {
+        return console.error(err);
+      }
     }
   }
 
   async getTrendingTwitter(country : string) {
     try {
       const response = await axios.get(`https://karmic-koala-backend.vercel.app/tweets/trending/${country}`);
+      return response.data;
+    } catch (err) {
+      return console.error(err);
+    }
+  }
+
+  async getTwitterStats() {
+    try {
+      const user = await this.AuthService.getUserLogged();
+      const userTwitter = user.twitterUserName;
+      const response = await axios.get(`https://karmic-koala-backend.vercel.app/tweets/${userTwitter}`);
       return response.data;
     } catch (err) {
       return console.error(err);
