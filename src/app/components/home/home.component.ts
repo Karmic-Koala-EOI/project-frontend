@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  tokenGoogle : string = "";
+
+  constructor(private route : ActivatedRoute, private AuthService :  AuthService) {
+    this.route.queryParams.subscribe(params => {
+      this.tokenGoogle = params['google'];
+    });
+    if(this.tokenGoogle !== undefined) {
+      this.AuthService.setToken(this.tokenGoogle);
+    }
+  }
 
   ngOnInit(): void {
   }
