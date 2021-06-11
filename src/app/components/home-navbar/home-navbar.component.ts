@@ -31,7 +31,6 @@ export class HomeNavbarComponent implements OnInit {
     this.AuthService.getUserLogged()
       .then(user => {
         if(user) {
-          console.log(user);
           this.user = user;
           this.userLogged =  true;
         }

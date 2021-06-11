@@ -21,7 +21,6 @@ export class StatsComponent implements OnInit {
   async getTwitterStats(){
     try {
       const response = await this.SocialMediaService.getTwitterStats();
-      console.log(response);
       response.forEach((stat : any) => {
         // let date = new Date(stat.created_at);
         // console.log(date.getFullYear());

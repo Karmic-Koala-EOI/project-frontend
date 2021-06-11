@@ -64,7 +64,6 @@ export class ProfileComponent implements OnInit {
   submitProfile() {
     this.errorReg = false;
     this.updateOk = false;
-    console.log(this.profileForm.value);
     this.ProfileService.updateProfile(this.profileForm.value, this.user.email, this.AuthService.getToken())
       .then(res => {
         if(res){ 
