@@ -75,13 +75,13 @@
     text-align: center
 }
 
-input:invalid{
+/* input:invalid{
   border-color: rgb(241, 82, 82);
 }
 
 input:valid{
   border-color: rgb(132, 235, 132);
-}
+} */
 
 input:placeholder-shown{
   border-color: rgb(168, 167, 168);
@@ -92,4 +92,12 @@ input:placeholder-shown{
 }
 .btn:hover{
   transform: scale(1.1);
+}
+
+.ng-valid.ng-dirty:not(form) {
+  border: solid 2px lightgreen;
+}
+
+.ng-invalid.ng-dirty:not(form), .ng-invalid:not(form).form-submitted {
+  border: solid 2px lightcoral;
 }
