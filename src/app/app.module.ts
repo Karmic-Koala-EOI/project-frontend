@@ -20,6 +20,7 @@ import { PostContentComponent } from './components/post-content/post-content.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeNavbarComponent } from './components/home-navbar/home-navbar.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HomeNavbarComponent } from './components/home-navbar/home-navbar.compon
     DashboardNavbarComponent,
     ProfileComponent,
     FooterComponent,
-    HomeNavbarComponent
+    HomeNavbarComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
