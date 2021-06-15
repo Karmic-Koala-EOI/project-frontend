@@ -46,7 +46,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
