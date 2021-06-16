@@ -20,7 +20,9 @@ import { PostContentComponent } from './components/post-content/post-content.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeNavbarComponent } from './components/home-navbar/home-navbar.component';
-import { StatisticsComponent } from './components/statistics/statistics.component';
+import { StatisticsComponent} from './components/statistics/statistics.component'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxChartsModule,
+    BrowserAnimationsModule ,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

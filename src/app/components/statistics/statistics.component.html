@@ -1,6 +1,17 @@
 <p>statistics works!</p>
 
-<div id="divChart">
-    <canvas id="myChart"></canvas>
-</div>
+<ngx-charts-bar-vertical
+
+[scheme]="colorScheme"
+[results]="single"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[xAxisLabel]="xAxisLabel"
+[yAxisLabel]="yAxisLabel"
+  (select)="onSelect($event)">
+</ngx-charts-bar-vertical>
 
