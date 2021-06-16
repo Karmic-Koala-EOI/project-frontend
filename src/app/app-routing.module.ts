@@ -13,6 +13,7 @@ import { RpgLegalTermsComponent } from './components/rpg-legal-terms/rpg-legal-t
 import { RpgPrivacyPolicyComponent } from './components/rpg-privacy-policy/rpg-privacy-policy.component';
 import { UserIsLoggedGuard } from './guards/user-is-logged.guard';
 import { SocialMediaAccountsComponent } from './components/social-media-accounts/social-media-accounts.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 const routes: Routes = [{
   path: '',

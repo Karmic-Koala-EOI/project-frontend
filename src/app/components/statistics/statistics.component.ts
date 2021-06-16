@@ -7,10 +7,12 @@ import { Chart } from 'chart.js';
   styleUrls: ['./statistics.component.css'],
 })
 export class StatisticsComponent implements OnInit {
+
   constructor() {}
 
   ngOnInit() {
-    var myChart = new Chart('myChart', {
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart('myChart', {
       type: 'bar',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
