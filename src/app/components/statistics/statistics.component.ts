@@ -13,44 +13,33 @@ import { Input } from '@angular/core';
 
 
 export class StatisticsComponent implements OnInit {
-  //view : any = [960, 344];
-  // Input value line chart
-  
-  @Input() data: any;
+  single: any[] = [];
+  multi: any[] =[];
+
+  view: any[] = [700, 400];
 
   // options
-  legend: boolean = false;
-  showLabels: boolean = true;
-  animations: boolean = true;
-  xAxis: boolean = true;
-  yAxis: boolean = true;
-  showYAxisLabel: boolean = true;
-  showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Date';
-  yAxisLabel: string = 'Total value ($)';
-  timeline: boolean = true;
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+  yAxisLabel = 'Population';
 
   colorScheme = {
-    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
   constructor() {
-    Object.assign(this, this.data);
+    Object.assign(this, { single })
   }
 
-  ngOnInit(): void {
+  onSelect(event:any) {
+    console.log(event);
   }
 
-  onSelect(data : any): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-  }
-
-  onActivate(data : any): void {
-    console.log('Activate', JSON.parse(JSON.stringify(data)));
-  }
-
-  onDeactivate(data : any): void {
-    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-  }
+  ngOnInit(){}
 }
 
