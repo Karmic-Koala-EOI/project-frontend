@@ -14,12 +14,6 @@
             </blockquote>
           </div>
         </div>
-        <div class ="card">
-          <div class ="card-header"> Estadisticas de Twitter </div>
-          <div class = "card-body">
-            <app-statistics></app-statistics>
-          </div>
-        </div>
         <div class="card" *ngIf="trendingTwitter.length > 0">
           <div class="card-header">
             Trending topics de Twitter<span *ngIf="user.country == 'Global'"> {{user.country}}</span><span *ngIf="user.country !== 'Global' && user.country !== undefined"> en {{user.country}}</span>
@@ -31,6 +25,12 @@
                 <span class="badge badge-primary badge-pill">{{ trend.tweet_volume }}</span>
               </li>
             </ul>
+          </div>
+        </div>
+        <div class ="card">
+          <div class ="card-header"> Estadisticas de Twitter </div>
+          <div class = "card-body">
+            <app-statistics></app-statistics>
           </div>
         </div>
       </main>
