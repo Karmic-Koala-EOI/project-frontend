@@ -1,7 +1,9 @@
-import { Component, NgModule} from '@angular/core';
-import { single } from './data';
+import { Component, NgModule, OnInit} from '@angular/core';
+import { single } from './data'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-statistics',
@@ -9,31 +11,46 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   styleUrls: ['./statistics.component.css'],
 })
 
-export class StatisticsComponent {
-  single: any[] = [];
-  multi: any[] =[];
 
-  view: any[] = [700, 400];
+export class StatisticsComponent implements OnInit {
+  //view : any = [960, 344];
+  // Input value line chart
+  
+  @Input() data: any;
 
   // options
-  showXAxis = true;
-  showYAxis = true;
-  gradient = false;
-  showLegend = true;
-  showXAxisLabel = true;
-  xAxisLabel = 'Country';
-  showYAxisLabel = true;
-  yAxisLabel = 'Population';
+  legend: boolean = false;
+  showLabels: boolean = true;
+  animations: boolean = true;
+  xAxis: boolean = true;
+  yAxis: boolean = true;
+  showYAxisLabel: boolean = true;
+  showXAxisLabel: boolean = true;
+  xAxisLabel: string = 'Date';
+  yAxisLabel: string = 'Total value ($)';
+  timeline: boolean = true;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
   constructor() {
-    Object.assign(this, { single })
+    Object.assign(this, this.data);
   }
 
-  onSelect(event:any) {
-    console.log(event);
+  ngOnInit(): void {
+  }
+
+  onSelect(data : any): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data : any): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data : any): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 }
+
