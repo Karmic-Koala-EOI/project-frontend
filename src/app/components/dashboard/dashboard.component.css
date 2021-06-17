@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .container-dash{
     display: flex;
     flex-direction: column;
@@ -59,22 +61,42 @@ header, main{
     margin: 20px;
 }
 
-.card-group{
+.card-header{
+    font-style: initial;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #6c28da, #aee0dc);
+  }
+  
+  label{
+    font-style: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+  }
+  
+  .card-group{
     margin: 20px;
-    border-radius: 5px;
-}
+    border-radius: 20px;
+  }
+  
+  .card{
+    margin-left: 27%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background: #c2e2e29c;
+    opacity: 5px;
+  }
 
-.card{
-    margin: 20px;
-    position: static;
-}
 
 ul .list-group {
         max-height: 300px !important;
         scroll-behavior: smooth;
-
 }
 
+li .list-group-item a{
+    background: linear-gradient(to bottom, #77add1, #aee0dc);
+}
+
+  
 .descrip{
     margin: 20px;
 }

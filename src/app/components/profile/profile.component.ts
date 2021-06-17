@@ -31,6 +31,9 @@ export class ProfileComponent implements OnInit {
   errorReg : boolean = false;
   updateOk : boolean = false;
 
+  LoggedTwitter : boolean = false;
+  unlinkError : boolean = false;
+
   constructor(private AuthService : AuthService, private ProfileService : ProfileService, private Router : Router) { }
 
   ngOnInit(): void {
@@ -80,4 +83,11 @@ export class ProfileComponent implements OnInit {
         this.errorReg = true;
       });
   }
+
+  async loginTwitter() {
+    let userID = this.AuthService.getUserID();
+
+    window.location.href = `http://localhost:3000/auth/twitter?_id=${userID}`;
+  }
+  
 }

@@ -4,7 +4,7 @@
     <div class="main">
       <main>
         <div class="card">
-          <div class="card-header">
+          <div class="card-header" height="30px">
             Bienvenido al dashboard {{user.userName}}
           </div>
           <div class="card-body">
@@ -27,14 +27,14 @@
             </ul>
           </div>
         </div>
-        <div class="card" *ngIf="trendingTwitter.length > 0">
+        <!-- <div class="card" *ngIf="trendingTwitter.length > 0">
           <div class="card-header">
             Estadísticas
           </div>
           <div class="card-body">
             <app-stats></app-stats>
           </div>
-        </div>
+        </div> -->
       </main>
     </div>
   </div>

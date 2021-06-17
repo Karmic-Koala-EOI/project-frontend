@@ -1,12 +1,54 @@
-<div class="aside">
-    
-    <a href="" class="dashboard"><img src="https://icons.getbootstrap.com/assets/icons/house-fill.svg" alt="" height="30"></a>
-    
-    <a routerLink="/dashboard/profile" class="dashboard"><img src="https://icons.getbootstrap.com/assets/icons/person-fill.svg" alt="" height="30"></a>
-    <a routerLink="/dashboard" class="dashboard"><img src="../../../assets/images/dashboard50px.png" alt="" height="30"></a>
-    <a routerLink="/dashboard/social-media-accounts" class="dashboard"><img src="https://icons.getbootstrap.com/assets/icons/share-fill.svg"  alt="" height="30"></a>
-    <a routerLink="/dashboard/post-content" class="dashboard"><img src="https://cdn2.iconfinder.com/data/icons/squircle-ui/32/Edit-512.png" alt="" height="30"></a>
-    <!-- <a href="" class="calendar"><img src="../../../assets/images/calendar.png" alt=""></a> -->
-    <!-- <a href="" class="question"><img src="../../../assets/images/question50.png" alt=""></a> -->
-    <a href="/" class="dashboard" (click)="logout()"><img src="https://icons.getbootstrap.com/assets/icons/door-open-fill.svg" alt="" height="30"></a>
-</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="navigation">
+        <ul>
+            <li class="mb-3 mt-5">
+                <a href="">
+                    <span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="mb-3">
+                <a href="/dashboard/profile">
+                    <span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li class="mb-3">
+                <a href="/dashboard">
+                    <span class="icon"><i class="fas fa-list" aria-hidden="true"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+             <li class="mb-3">
+                <a href="">
+                    <span class="icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></span>
+                    <span class="title">Statistics</span>
+                </a>
+            </li>
+            <li class="mb-3">
+                <a href="/dashboard/post-content">
+                    <span class="icon"><i class="fas fa-paperclip" aria-hidden="true"></i></span>
+                    <span class="title">Post Content</span>
+                </a>
+            </li>
+            <li>
+                <a href="/" (click)="logout()">
+                    <span class="icon"><i class="fas fa-door-open" aria-hidden="true"></i></span>
+                    <span class="title">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,32 +1,91 @@
-.aside{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.navigation{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #8956db, #aee0dc);
+    position:absolute;
+    width: 85px;
+    transition: 0.5s;  
+    overflow: hidden;
+}
+
+.navigation:hover{
+    width: 250px; 
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0; /*CAMBIAR SI PONEMOS IMG DEL USER */
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+#logo{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+
+.navigation ul li:hover{
+    transform: scale(1.1);
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #AFF6CF;
-    border: solid 2px rgb(65, 139, 115);
-    border-right: solid 1px rgb(65, 139, 115);
-    max-width: 150px;
-    min-width: 100px;
-    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    transform: scale(1.1x);
 }
-
-.aside a {
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
     height: 60px;
+    line-height: 60px;
+    text-align: start;
 }
 
-.img-profile{
-    /* HACER RESPONSIVE Y QUE ESCALEN LOS ICONOS */
-    margin: 20px;
-    background-color: darkgray;
-    border-radius: 100%;
+.navigation ul li a .icon .fa{
+    font-size: 24px;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+ .toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #8956db, #aee0dc);
     width: 60px;
     height: 60px;
-}
+    cursor: pointer;
+} 
+ 
 
-.img-profile a {
-    text-decoration: black;
-}
-
-.dashboard{
-    margin: 20px;
+@media (max-width: 767px){
+    .navigation{
+        left: -60px;
+    }
+    .navigation.active{
+        left: 0px;
+        width: 100%;
+    }
 }
