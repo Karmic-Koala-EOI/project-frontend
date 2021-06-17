@@ -93,3 +93,11 @@ input:placeholder-shown{
 .btn:hover{
   transform: scale(1.1);
 }
+
+.ng-valid.ng-dirty:not(form) {
+  border: solid 2px lightgreen;
+}
+
+.ng-invalid.ng-dirty:not(form), .ng-invalid:not(form).form-submitted {
+  border: solid 2px lightcoral;
+}
