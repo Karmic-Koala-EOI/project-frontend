@@ -40,7 +40,7 @@ export class SocialMediaAccountsComponent implements OnInit {
     // } catch (err) {
     //   return console.error(err);
     // }
-    window.location.href = `https://karmic-koala-backend.vercel.app/auth/twitter?_id=${userID}`;
+    window.location.href = `http://localhost:3000/auth/twitter?_id=${userID}`;
   }
 
   unlinkTwitter() {
