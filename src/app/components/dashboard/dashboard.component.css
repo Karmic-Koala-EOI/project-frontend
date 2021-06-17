@@ -92,10 +92,20 @@ ul .list-group {
         scroll-behavior: smooth;
 }
 
-li .list-group-item a{
-    background: linear-gradient(to bottom, #77add1, #aee0dc);
+.list-group-item{
+    background: #c5dddd9c;
+}
+.list-group-item a{
+    text-decoration: none;
 }
 
+.list-group-item a:hover {
+    background: #c2e2e29c;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    text-shadow: 7rem #aee0dc;
+    border-radius: 0.5vh;
+}
   
 .descrip{
     margin: 20px;
