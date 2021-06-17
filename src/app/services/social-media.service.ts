@@ -40,7 +40,7 @@ export class SocialMediaService {
           const binaryString = reader.result;
           const base64PhotoFile = btoa(binaryString as string);
           try {
-            const response = await axios.post("http://localhost:3000/postTweet", {
+            const response = await axios.post("https://karmic-koala-backend.vercel.app/postTweet", {
               query: {
                 _id: userID
               },
@@ -61,7 +61,7 @@ export class SocialMediaService {
     }
     else {
       try {
-        const response = await axios.post("http://localhost:3000/postTweet", {
+        const response = await axios.post("https://karmic-koala-backend.vercel.app/postTweet", {
           query: {
             _id: userID
           },
