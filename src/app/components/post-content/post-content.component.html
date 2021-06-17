@@ -9,14 +9,16 @@
                 </div>
                 <div *ngIf="twitterLogged" class="card-body">
                   <form class="form-post-twitter" [formGroup]="postTwitterForm" (ngSubmit)="submitPostTwitter($event)">
+                    <div class="row">
                     <div class="form-group">
                       <label for="inputMessage">Texto</label>
-                      <textarea id="inputMessage" class="form-control" cols="50" rows="6" placeholder="Insert your post" formControlName="message" autofocus></textarea>
+                      <textarea id="inputMessage" class="form-control" cols="80" rows="4" placeholder="Insert your post" formControlName="message" autofocus></textarea>
                     </div>
                     <div class="form-group">
                       <label for="inputPhotoURL">Cargar imagen</label>
-                      <input type="file" id="inputPhotoURL" class="form-control" placeholder="URL de la foto" formControlName="photo_url">
+                      <input type="file" id="inputFile" class="form-control imagen" placeholder="URL de la foto" formControlName="photo_url">
                     </div>
+                  </div>
                     <div *ngIf="postError" class="alert alert-danger" role="alert"> 
                       Error al intentar publicar el tweet
                     </div>

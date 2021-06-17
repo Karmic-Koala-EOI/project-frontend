@@ -274,26 +274,10 @@ label{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-#inputPhotoURL{
-  display: none;
-}
 
-#inputFile{
-  color: white;
-  background-color: rgb(64, 144, 209);
-  height: 30px;
-  width: 200px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
+.image:hover{
+  -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .descrip{
