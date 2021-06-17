@@ -1,3 +1,9 @@
+.navbar-header {
+
+    background: linear-gradient(-90deg, #aff6cf 0%, #9f98e8 100%);
+    padding-bottom: 3px;
+}
+
 .business {
     padding: 60px 60px;
 }
@@ -41,9 +47,29 @@
     padding: 60px 60px;
 }
 
-.team .avatar{
-    margin-top: 30px;
+div .team{ 
+    -moz-transition: all 0.3s !important;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
+
+div .team:hover {
+    -moz-transform: scale(1.3) !important;
+    -webkit-transform: scale(1.3) !important;
+    transform: scale(1.3) !important;
+
+  }
+
+  i.fa-linkedin:hover{
+    color:blue !important;
+  }
+
+  i.fa-github:hover{
+    color:black !important;
+  }
+/* .team .avatar{
+    margin-top: 30px;
+} */
 
 footer {
     /* background: linear-gradient(0deg, #aff6cf 0%, #9f98e8 100%); */

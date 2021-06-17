@@ -1,4 +1,7 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
   .container-fluid {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -15,14 +18,72 @@
     background-size:auto;
     height: 100vh;
   }
- 
+  
+  .form-post-twitter {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color:white;
+    opacity: 0.7;
+  }
   .forgotpassword{
     color:grey;
     size: 20%;
     cursor:pointer;
     font-size: 0.75rem;
 }
- 
+  .form-post-twitter .checkbox {
+    font-weight: 400;
+  }
+  .form-post-twitter .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-post-twitter .form-control:focus {
+    z-index: 2;
+  }
+  .form-post-twitter input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-post-twitter input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .btn-google {
+    color: #AFF6CF;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 1px #ddd
+}
+.or-container {
+    align-items: center;
+    color: #ccc;
+    display: flex;
+    margin: 25px 0
+}
+.line-separator {
+    background-color: #ccc;
+    flex-grow: 5;
+    height: 1px
+}
+.or-label {
+    flex-grow: 1;
+    margin: 0 15px;
+    text-align: center
+}
+.registerbtn {
+  color: blue; 
+  text-decoration-line: underline;
+  padding: 10px; 
+  cursor: pointer;
+}
+
 .container-dash{
   display: flex;
   flex-direction: column;
@@ -32,28 +93,16 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
+  background-color: #f1dfff;
 }
 
 .main{
   width: 100%;
-  background-color:lightgray;
+  background-color: #c2e2e29c;
   border: solid 2px rgb(148, 139, 125);
   border-left: solid 1px rgb(148, 139, 125);
 }
-.aside{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #AFF6CF;
-  border: solid 2px rgb(65, 139, 115);
-  border-right: solid 1px rgb(65, 139, 115);
-  max-width: 150px;
-  min-width: 100px;
-}
 
-.aside a {
-  height: 60px;
-}
 
 .dashboard{
   margin: 20px;
@@ -83,13 +132,88 @@ header, main{
   margin: 20px;
 }
 
+footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+}
+
+.foo {
+  text-align: center;
+}
+
+.card-header{
+  font-style: initial;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #6c28da, #aee0dc);
+}
+
+label{
+  font-style:inherit;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+
 .card-group{
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .card{
-  margin: 20px;
+  margin-left: 27%;
+  margin-right: 20%;
+  margin-top: 5%;
+  background: #c2e2e29c;
+  opacity: 5px;
+}
+
+.form-post-twitter{
+  background: #c2e2e29c;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    border-color: transparent;
+    /* background-color: #5109c5; */
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#btnSend{
+  background-color: #8956db;
+}
+
+.modal-title{
+  font-family: 'Poppins', sans-serif;
+}
+.modal-body p{
+  font-family: 'Poppins', sans-serif;
+}
+
+.minh-100 {
+  height: 100vh;
+}
+
+#linkTwitter{
+  background-color:#1DA1F2;
+  justify-content: center;
+  border-radius: 3vh;
+}
+#linkTwitter:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  border-radius: 2vh;
+}
+
+#linkDiscord{
+  border-radius: 3vh;
+  background-color: rgb(77, 139, 189);
+}
+#linkDiscord:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  border-radius: 2vh;
 }
 
 .descrip{

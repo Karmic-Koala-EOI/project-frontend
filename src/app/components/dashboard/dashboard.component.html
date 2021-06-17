@@ -3,8 +3,8 @@
     <app-dashboard-navbar></app-dashboard-navbar>
     <div class="main">
       <main>
-        <div class="card">
-          <div class="card-header">
+        <div class="card mt-4">
+          <div class="card-header" height="30px">
             Bienvenido al dashboard {{user.userName}}
           </div>
           <div class="card-body">
@@ -14,7 +14,7 @@
             </blockquote>
           </div>
         </div>
-        <div class="card" *ngIf="trendingTwitter.length > 0">
+        <div class="card mt-4" *ngIf="trendingTwitter.length > 0">
           <div class="card-header">
             Trending topics de Twitter<span *ngIf="user.country == 'Global'"> {{user.country}}</span><span *ngIf="user.country !== 'Global' && user.country !== undefined"> en {{user.country}}</span>
           </div>
@@ -34,7 +34,7 @@
           <div class="card-body">
             <app-stats></app-stats>
           </div>
-        </div>
+        </div> -->
       </main>
     </div>
   </div>
