@@ -24,10 +24,13 @@ export class DashboardComponent implements OnInit {
   
   trendingTwitter : TrendingTwitter[] = [];
 
+  LoggedTwitter : boolean = false;
+
   constructor(private AuthService : AuthService, private SocialMediaService : SocialMediaService) { }
 
   ngOnInit(): void {
     this.getUserLogged();
+    this.isLoggedTwitter();
   }
 
   getUserLogged() {
@@ -62,5 +65,10 @@ export class DashboardComponent implements OnInit {
       .then(trending => {
         this.trendingTwitter = trending.trends.slice(0,5);
       })
+  }
+
+  isLoggedTwitter() {
+    this.SocialMediaService.isLoggedTwitter()
+      .then(logged => this.LoggedTwitter = logged);
   }
 }
